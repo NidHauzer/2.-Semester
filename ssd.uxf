@@ -108,7 +108,7 @@ name, productId, barcode</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>325</x>
+      <x>312</x>
       <y>442</y>
       <w>429</w>
       <h>52</h>
