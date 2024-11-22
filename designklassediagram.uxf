@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>3</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>117</x>
+      <y>381</y>
+      <w>144</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>Product
+--
+- barcode: String
+- quantityInStock: int
+- minStock: int
+- type: String
+- colour: String
+- length: int
+- amount: int
+--
++ &lt;&lt;create&gt;&gt; Product(barcode: String, quantityInStock: int, minStock: int, 
+   type: String, colour: String, length: int, amount: int)
++ getBarcode(): String
++ getQuantityInStock(): int
++ getMinStock(): int
++ getType(): String
++ getColour(): String
++ getLength(): int
++ getAmount(): int
++ setQuantityInStock(quantity: int)
++ setMinStock(stock: int)
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>414</y>
+      <w>105</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Location
+--
+- locationCode: String
+- product: Product
+--
++ &lt;&lt;create&gt;&gt; Location(locationCode: String)
++ getLocationCode(locationCode: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>411</y>
+      <w>105</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Warehouse
+--
+- id: String
+- locations: List&lt;Location&gt;
+--
++ &lt;&lt;create&gt;&gt; Warehouse(id: String)
++ getId(): String
++ getLocations(): List&lt;Location&gt;
++ addLocation(location: Location): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>135</x>
+      <y>312</y>
+      <w>105</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>ItemLine
+--
+- quantity: int
+- product: Product
+--
++ &lt;&lt;create&gt;&gt; ItemLine(product: Product, quantity: int)
++ getProduct(): Product
++ getQuantity(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>306</y>
+      <w>111</w>
+      <h>57</h>
+    </coordinates>
+    <panel_attributes>SupplyOrder
+--
+orderNo: int
+date: LocalDate
+items: List&lt;ItemLine&gt;
+--
+&lt;&lt;create&gt;&gt; SupplyOrder(orderNo: int, date: LocalDate)
++ getOrderNo(): int
++ getDate(): LocalDate
++ getItems(): List&lt;ItemLine&gt;
++ addItem(itemLine: ItemLine): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>105</x>
+      <y>219</y>
+      <w>153</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Shipment
+--
+- recipient: Recipient
+- shipmentNo: int
+- date: LocalDate
+- items: List&lt;ItemLine&gt;
+--
++ &lt;&lt;create&gt;&gt; Shipment(recipient: Recipient, shipmentNo: int, date: LocalDate)
++ getRecipient(): Recipient
++ getShipmentNo(): int
++ getDate(): LocalDate
++ getItems(): List&lt;ItemLine&gt;
++ addItem(itemLine: ItemLine): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
