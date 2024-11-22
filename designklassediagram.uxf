@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>6</zoom_level>
+  <zoom_level>5</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>564</x>
-      <y>474</y>
-      <w>288</w>
-      <h>204</h>
+      <x>500</x>
+      <y>305</y>
+      <w>240</w>
+      <h>170</h>
     </coordinates>
     <panel_attributes>Product
 --
@@ -39,10 +39,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>930</x>
-      <y>540</y>
-      <w>210</w>
-      <h>72</h>
+      <x>805</x>
+      <y>360</y>
+      <w>175</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>Location
 --
@@ -56,10 +56,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1194</x>
-      <y>534</y>
-      <w>210</w>
-      <h>102</h>
+      <x>1025</x>
+      <y>355</y>
+      <w>175</w>
+      <h>85</h>
     </coordinates>
     <panel_attributes>Warehouse
 --
@@ -77,10 +77,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>600</x>
-      <y>336</y>
-      <w>210</w>
-      <h>72</h>
+      <x>530</x>
+      <y>190</y>
+      <w>175</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>ItemLine
 --
@@ -95,10 +95,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>330</x>
-      <y>324</y>
-      <w>222</w>
-      <h>114</h>
+      <x>305</x>
+      <y>180</y>
+      <w>185</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>SupplyOrder
 --
@@ -118,10 +118,10 @@ items: List&lt;ItemLine&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>540</x>
-      <y>150</y>
-      <w>306</w>
-      <h>126</h>
+      <x>480</x>
+      <y>35</y>
+      <w>255</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>Shipment
 --
@@ -141,10 +141,10 @@ items: List&lt;ItemLine&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>906</x>
-      <y>162</y>
-      <w>294</w>
-      <h>96</h>
+      <x>785</x>
+      <y>45</y>
+      <w>245</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Recipient
 --
@@ -161,10 +161,10 @@ items: List&lt;ItemLine&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>24</x>
-      <y>108</y>
-      <w>240</w>
-      <h>144</h>
+      <x>50</x>
+      <y>0</y>
+      <w>200</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>Address
 --
@@ -186,10 +186,10 @@ country: String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>336</y>
-      <w>288</w>
-      <h>96</h>
+      <x>30</x>
+      <y>190</y>
+      <w>240</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Supplier
 --
@@ -206,10 +206,10 @@ country: String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>288</x>
-      <y>168</y>
-      <w>234</w>
-      <h>78</h>
+      <x>270</x>
+      <y>50</y>
+      <w>195</w>
+      <h>65</h>
     </coordinates>
     <panel_attributes>Employee
 --
