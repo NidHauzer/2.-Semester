@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>6</zoom_level>
+  <zoom_level>4</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>534</x>
-      <y>210</y>
-      <w>60</w>
-      <h>18</h>
+      <x>496</x>
+      <y>240</y>
+      <w>40</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: ShipmentUI</panel_attributes>
     <additional_attributes/>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>516</x>
-      <y>318</y>
-      <w>102</w>
-      <h>18</h>
+      <x>484</x>
+      <y>312</y>
+      <w>68</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: ShipmentController</panel_attributes>
     <additional_attributes/>
@@ -26,10 +26,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>528</x>
-      <y>384</y>
-      <w>72</w>
-      <h>18</h>
+      <x>492</x>
+      <y>356</y>
+      <w>48</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: ShipmentDB</panel_attributes>
     <additional_attributes/>
@@ -37,10 +37,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>660</x>
-      <y>540</y>
-      <w>72</w>
-      <h>18</h>
+      <x>580</x>
+      <y>460</y>
+      <w>48</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: DBConnection</panel_attributes>
     <additional_attributes/>
@@ -48,10 +48,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>882</x>
-      <y>318</y>
-      <w>90</w>
-      <h>18</h>
+      <x>728</x>
+      <y>312</y>
+      <w>60</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: EmployeeController</panel_attributes>
     <additional_attributes/>
@@ -59,10 +59,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>900</x>
-      <y>384</y>
-      <w>60</w>
-      <h>18</h>
+      <x>740</x>
+      <y>356</y>
+      <w>40</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: EmployeeDB</panel_attributes>
     <additional_attributes/>
@@ -70,10 +70,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>138</x>
-      <y>312</y>
-      <w>102</w>
-      <h>18</h>
+      <x>232</x>
+      <y>308</y>
+      <w>68</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: ProductController</panel_attributes>
     <additional_attributes/>
@@ -81,10 +81,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>354</x>
-      <y>360</y>
-      <w>102</w>
-      <h>18</h>
+      <x>376</x>
+      <y>340</y>
+      <w>68</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: ProductDB</panel_attributes>
     <additional_attributes/>
@@ -92,14 +92,14 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>558</x>
-      <y>150</y>
-      <w>234</w>
-      <h>72</h>
+      <x>512</x>
+      <y>200</y>
+      <w>156</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>
 1: createShipment(employeeNo)
-2: addLineItem(productId, quantity, shipmentNo)
+2: addItemLine(barcode, quantity, shipmentNo)
 3: addRecipientToShipment(employeeNo, shipmentNo)
 
 lt=-</panel_attributes>
@@ -108,10 +108,10 @@ lt=-</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>312</x>
-      <y>588</y>
-      <w>102</w>
-      <h>18</h>
+      <x>348</x>
+      <y>492</y>
+      <w>68</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: Product</panel_attributes>
     <additional_attributes/>
@@ -119,10 +119,10 @@ lt=-</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>528</x>
-      <y>444</y>
-      <w>72</w>
-      <h>18</h>
+      <x>492</x>
+      <y>396</y>
+      <w>48</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: Shipment</panel_attributes>
     <additional_attributes/>
@@ -130,10 +130,10 @@ lt=-</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>900</x>
-      <y>444</y>
-      <w>60</w>
-      <h>18</h>
+      <x>740</x>
+      <y>396</y>
+      <w>40</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: Employee</panel_attributes>
     <additional_attributes/>
@@ -141,36 +141,36 @@ lt=-</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>234</x>
-      <y>312</y>
-      <w>294</w>
-      <h>24</h>
+      <x>296</x>
+      <y>308</y>
+      <w>196</w>
+      <h>16</h>
     </coordinates>
     <panel_attributes>lt=-
-2.2.1:  createItemLine(productId, quantity, shipmentNo): LineItem</panel_attributes>
+2.2.1:  createItemLine(barcode, quantity, shipmentNo): ItemLine</panel_attributes>
     <additional_attributes>10.0;20.0;470.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>558</x>
-      <y>222</y>
-      <w>288</w>
-      <h>108</h>
+      <x>512</x>
+      <y>248</y>
+      <w>164</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=-
 1.1: createShipment(employee): Shipment
-2.1 addLineItem(productId, quantity, shipmentNo): Product, quantity
+2.1 addItemLine(barcode, quantity, shipmentNo): ItemLine
 3.1 addRecipientToShipment(): Recipient</panel_attributes>
     <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>558</x>
-      <y>330</y>
-      <w>234</w>
-      <h>66</h>
+      <x>512</x>
+      <y>320</y>
+      <w>156</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=-
 1.2.1: createShipment(employee)
@@ -181,10 +181,10 @@ lt=-</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1200</x>
-      <y>444</y>
-      <w>60</w>
-      <h>18</h>
+      <x>940</x>
+      <y>396</y>
+      <w>40</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: Recipient</panel_attributes>
     <additional_attributes/>
@@ -192,10 +192,10 @@ lt=-</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1200</x>
-      <y>60</y>
-      <w>60</w>
-      <h>18</h>
+      <x>940</x>
+      <y>140</y>
+      <w>40</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: Address</panel_attributes>
     <additional_attributes/>
@@ -203,10 +203,10 @@ lt=-</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1200</x>
-      <y>384</y>
-      <w>60</w>
-      <h>18</h>
+      <x>940</x>
+      <y>356</y>
+      <w>40</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: RecipientDB</panel_attributes>
     <additional_attributes/>
@@ -214,10 +214,10 @@ lt=-</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1200</x>
-      <y>0</y>
-      <w>60</w>
-      <h>18</h>
+      <x>940</x>
+      <y>100</y>
+      <w>40</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: AddressDB</panel_attributes>
     <additional_attributes/>
@@ -225,10 +225,10 @@ lt=-</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>12</x>
-      <y>648</y>
-      <w>102</w>
-      <h>18</h>
+      <x>148</x>
+      <y>532</y>
+      <w>68</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: ItemLine</panel_attributes>
     <additional_attributes/>
@@ -236,10 +236,10 @@ lt=-</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>72</x>
-      <y>498</y>
-      <w>102</w>
-      <h>18</h>
+      <x>188</x>
+      <y>432</y>
+      <w>68</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: ItemLineDB</panel_attributes>
     <additional_attributes/>
@@ -247,10 +247,10 @@ lt=-</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1188</x>
-      <y>318</y>
-      <w>90</w>
-      <h>18</h>
+      <x>932</x>
+      <y>312</y>
+      <w>60</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>: RecipientController</panel_attributes>
     <additional_attributes/>
@@ -258,23 +258,23 @@ lt=-</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>558</x>
-      <y>396</y>
-      <w>162</w>
-      <h>60</h>
+      <x>512</x>
+      <y>364</y>
+      <w>116</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-
-1.2.1.1: &lt;&lt;create&gt;&gt; shipment(employee)
+1.2.1.1: &lt;&lt;create&gt;&gt; shipment(employeeNo)
 </panel_attributes>
     <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>594</x>
-      <y>390</y>
-      <w>294</w>
-      <h>162</h>
+      <x>536</x>
+      <y>360</y>
+      <w>196</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=-
 
@@ -288,10 +288,10 @@ lt=-</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>606</x>
-      <y>294</y>
-      <w>606</w>
-      <h>36</h>
+      <x>544</x>
+      <y>296</y>
+      <w>404</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=-
 3.1.1: findRecipientByPhoneNo(phoneNo): Recipient</panel_attributes>
@@ -300,10 +300,10 @@ lt=-</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>924</x>
-      <y>330</y>
-      <w>258</w>
-      <h>66</h>
+      <x>756</x>
+      <y>320</y>
+      <w>172</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=-
 1.1.1.1 findEmployeeByEmployeeNo(employeeNo): Employee</panel_attributes>
@@ -312,10 +312,10 @@ lt=-</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>726</x>
-      <y>390</y>
-      <w>318</w>
-      <h>174</h>
+      <x>624</x>
+      <y>360</y>
+      <w>212</w>
+      <h>116</h>
     </coordinates>
     <panel_attributes>lt=-
 
@@ -325,10 +325,10 @@ lt=-</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>924</x>
-      <y>396</y>
-      <w>18</w>
-      <h>60</h>
+      <x>756</x>
+      <y>364</y>
+      <w>12</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-
 // 1.1.1.1.2 build(resultSet): employee
@@ -338,22 +338,22 @@ lt=-</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>324</y>
-      <w>300</w>
-      <h>48</h>
+      <x>240</x>
+      <y>316</y>
+      <w>200</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=-
-                                        2.2.1.1 findProductByProductId(productId): product</panel_attributes>
+                                        2.2.1.1 findProductByBarcode(productId): Product</panel_attributes>
     <additional_attributes>420.0;60.0;120.0;60.0;120.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>366</y>
-      <w>408</w>
-      <h>204</h>
+      <x>320</x>
+      <y>344</y>
+      <w>272</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=-
 
@@ -364,48 +364,49 @@ lt=-</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>354</x>
-      <y>372</y>
-      <w>180</w>
-      <h>228</h>
+      <x>376</x>
+      <y>348</y>
+      <w>120</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>lt=-
 2.2.1.1.2 &lt;&lt;create&gt;&gt; Product(name, barcode, 
-quantityInStock, minStock, colour)
+quantityInStock, minStock, colour, 
+length, type, amount)
 </panel_attributes>
     <additional_attributes>10.0;360.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>96</x>
-      <y>312</y>
-      <w>216</w>
-      <h>198</h>
+      <x>204</x>
+      <y>308</y>
+      <w>144</w>
+      <h>132</h>
     </coordinates>
     <panel_attributes>lt=-
-2.2.1.2 createLineItem(product, quantity): LineItem</panel_attributes>
+2.2.1.2 createItemLine(product, quantity): ItemLine</panel_attributes>
     <additional_attributes>10.0;310.0;10.0;10.0;70.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>168</x>
-      <y>504</y>
-      <w>516</w>
-      <h>162</h>
+      <x>252</x>
+      <y>436</y>
+      <w>344</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=-
 2.2.1.2.2 create(itemLine): ItemLine</panel_attributes>
-    <additional_attributes>10.0;10.0;150.0;10.0;150.0;240.0;840.0;250.0;840.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0;150.0;240.0;840.0;240.0;840.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>36</x>
-      <y>498</y>
-      <w>198</w>
-      <h>162</h>
+      <x>164</x>
+      <y>432</y>
+      <w>132</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=-
 2.2.1.2.1 &lt;&lt;create&gt;&gt; ItemLine(product, quantity)</panel_attributes>
@@ -414,10 +415,10 @@ quantityInStock, minStock, colour)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1224</x>
-      <y>330</y>
-      <w>186</w>
-      <h>66</h>
+      <x>956</x>
+      <y>320</y>
+      <w>124</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=-
 3.1.1.1: findRecipientByPhoneNo(phoneNo)</panel_attributes>
@@ -426,13 +427,38 @@ quantityInStock, minStock, colour)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>696</x>
-      <y>384</y>
-      <w>516</w>
-      <h>222</h>
+      <x>604</x>
+      <y>356</y>
+      <w>344</w>
+      <h>148</h>
     </coordinates>
     <panel_attributes>lt=-
 3.1.1.1.1: find(phoneNo): Recipient</panel_attributes>
     <additional_attributes>10.0;290.0;10.0;350.0;790.0;350.0;790.0;10.0;840.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>956</x>
+      <y>364</y>
+      <w>12</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+// 1.1.1.1.2 build(resultSet): employee
+// 1.1.1.1.2 &lt;&lt;create&gt;&gt; employee(name, employeeNo)</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>548</x>
+      <y>312</y>
+      <w>188</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=-
+1.1.1 findEmployeeByEmployeeNo(employeeNo): Employee</panel_attributes>
+    <additional_attributes>10.0;20.0;450.0;20.0</additional_attributes>
   </element>
 </diagram>
