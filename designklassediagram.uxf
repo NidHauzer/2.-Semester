@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>3</zoom_level>
+  <zoom_level>4</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>117</x>
-      <y>381</y>
-      <w>144</w>
-      <h>102</h>
+      <x>276</x>
+      <y>248</y>
+      <w>192</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>Product
 --
@@ -39,10 +39,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>300</x>
-      <y>414</y>
-      <w>105</w>
-      <h>36</h>
+      <x>520</x>
+      <y>292</y>
+      <w>140</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>Location
 --
@@ -56,10 +56,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>432</x>
-      <y>411</y>
-      <w>105</w>
-      <h>42</h>
+      <x>696</x>
+      <y>288</y>
+      <w>140</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>Warehouse
 --
@@ -75,10 +75,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>135</x>
-      <y>312</y>
-      <w>105</w>
-      <h>36</h>
+      <x>300</x>
+      <y>156</y>
+      <w>140</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>ItemLine
 --
@@ -93,10 +93,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>306</y>
-      <w>111</w>
-      <h>57</h>
+      <x>120</x>
+      <y>148</y>
+      <w>148</w>
+      <h>76</h>
     </coordinates>
     <panel_attributes>SupplyOrder
 --
@@ -116,10 +116,10 @@ items: List&lt;ItemLine&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>105</x>
-      <y>219</y>
-      <w>153</w>
-      <h>63</h>
+      <x>260</x>
+      <y>32</y>
+      <w>204</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>Shipment
 --
@@ -134,6 +134,51 @@ items: List&lt;ItemLine&gt;
 + getDate(): LocalDate
 + getItems(): List&lt;ItemLine&gt;
 + addItem(itemLine: ItemLine): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>40</y>
+      <w>196</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>Recipient
+--
+- name: String
+- phoneNo: String
+- address: Address
+--
++ &lt;&lt;create&gt;&gt; Recipient(name: String, phoneNo: String, address: Address)
++ getName(): String
++ getPhoneNo(): String
++ getAddress(): Address</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>160</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Addres
+--
+streetName: String
+houseNo: String
+zip: String
+city: String
+country: String
+--
++ &lt;&lt;create&gt;&gt; Address(streetName: String, houseNo: String, 
+   zip: String, city: String, country: String)
++ getStreetName(): String
++ getHouseNo(): String
++ getZip(): String
++ getCity(): String
++ getCountry(): String</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
