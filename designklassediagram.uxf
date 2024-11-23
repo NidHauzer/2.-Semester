@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="15.1">
-  <zoom_level>5</zoom_level>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>500</x>
-      <y>305</y>
-      <w>240</w>
-      <h>170</h>
+      <x>665</x>
+      <y>658</y>
+      <w>336</w>
+      <h>238</h>
     </coordinates>
     <panel_attributes>Product
 --
@@ -39,10 +39,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>805</x>
-      <y>360</y>
-      <w>175</w>
-      <h>60</h>
+      <x>1092</x>
+      <y>735</y>
+      <w>245</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>Location
 --
@@ -56,10 +56,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1025</x>
-      <y>355</y>
-      <w>175</w>
-      <h>85</h>
+      <x>1421</x>
+      <y>721</y>
+      <w>245</w>
+      <h>119</h>
     </coordinates>
     <panel_attributes>Warehouse
 --
@@ -77,10 +77,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>530</x>
-      <y>190</y>
-      <w>175</w>
-      <h>60</h>
+      <x>707</x>
+      <y>497</y>
+      <w>245</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>ItemLine
 --
@@ -95,15 +95,16 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>305</x>
-      <y>180</y>
-      <w>185</w>
-      <h>95</h>
+      <x>1015</x>
+      <y>469</y>
+      <w>259</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>SupplyOrder
 --
 orderNo: int
 date: LocalDate
+supplier: Supplier
 items: List&lt;ItemLine&gt;
 --
 &lt;&lt;create&gt;&gt; SupplyOrder(orderNo: int, date: LocalDate)
@@ -118,20 +119,20 @@ items: List&lt;ItemLine&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>480</x>
-      <y>35</y>
-      <w>255</w>
-      <h>105</h>
+      <x>637</x>
+      <y>280</y>
+      <w>357</w>
+      <h>147</h>
     </coordinates>
     <panel_attributes>Shipment
 --
-- recipient: Recipient
+- party: Party
 - shipmentNo: int
 - date: LocalDate
 - items: List&lt;ItemLine&gt;
 --
 + &lt;&lt;create&gt;&gt; Shipment(recipient: Recipient, shipmentNo: int, date: LocalDate)
-+ getRecipient(): Recipient
++ getParty(): Party
 + getShipmentNo(): int
 + getDate(): LocalDate
 + getItems(): List&lt;ItemLine&gt;
@@ -141,12 +142,12 @@ items: List&lt;ItemLine&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>785</x>
-      <y>45</y>
-      <w>245</w>
-      <h>80</h>
+      <x>1099</x>
+      <y>294</y>
+      <w>343</w>
+      <h>112</h>
     </coordinates>
-    <panel_attributes>Recipient
+    <panel_attributes>Party
 --
 - name: String
 - phoneNo: String
@@ -161,10 +162,10 @@ items: List&lt;ItemLine&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>50</x>
-      <y>0</y>
-      <w>200</w>
-      <h>120</h>
+      <x>1519</x>
+      <y>259</y>
+      <w>280</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>Address
 --
@@ -186,30 +187,26 @@ country: String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>30</x>
-      <y>190</y>
-      <w>240</w>
-      <h>80</h>
+      <x>1407</x>
+      <y>476</y>
+      <w>399</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>Supplier
 --
-- name: String
 - cvrNumber: String
-- address: Address
 --
-+ &lt;&lt;create&gt;&gt; Supplier(name: String, cvrNumber: String, address: Address)
-+ getName(): String
-+ getCvrNumber(): String
-+ getAddress(): Address</panel_attributes>
++ &lt;&lt;create&gt;&gt; Supplier(name: String, phoneNo: String, cvrNumber: String, address: Address)
++ getCvrNumber(): String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>270</x>
-      <y>50</y>
-      <w>195</w>
-      <h>65</h>
+      <x>266</x>
+      <y>308</y>
+      <w>273</w>
+      <h>91</h>
     </coordinates>
     <panel_attributes>Employee
 --
@@ -220,5 +217,126 @@ country: String
 + getName(): String
 + getEmployeeNo(): int</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>994</x>
+      <y>777</y>
+      <w>112</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1330</x>
+      <y>777</y>
+      <w>105</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>819</x>
+      <y>574</y>
+      <w>21</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>945</x>
+      <y>532</y>
+      <w>84</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1267</x>
+      <y>532</y>
+      <w>147</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1386</x>
+      <y>399</y>
+      <w>203</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>270.0;110.0;270.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1435</x>
+      <y>329</y>
+      <w>98</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1652</x>
+      <y>420</y>
+      <w>21</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>812</x>
+      <y>420</y>
+      <w>21</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>532</x>
+      <y>350</y>
+      <w>119</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>987</x>
+      <y>350</y>
+      <w>126</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
