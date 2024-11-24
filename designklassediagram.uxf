@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.0.0">
-  <zoom_level>8</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>648</x>
-      <y>728</y>
-      <w>384</w>
-      <h>272</h>
+      <x>402</x>
+      <y>726</y>
+      <w>288</w>
+      <h>204</h>
     </coordinates>
     <panel_attributes>Product
 --
@@ -33,16 +33,17 @@
 
 
 
-</panel_attributes>
+
+bg=TRANSPARENT</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1136</x>
-      <y>816</y>
-      <w>280</w>
-      <h>96</h>
+      <x>768</x>
+      <y>792</y>
+      <w>210</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>Location
 --
@@ -50,16 +51,17 @@
 - product: Product
 --
 + &lt;&lt;create&gt;&gt; Location(locationCode: String)
-+ getLocationCode(locationCode: String)</panel_attributes>
++ getLocationCode(locationCode: String)
+bg=TRANSPARENT</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1512</x>
-      <y>800</y>
-      <w>280</w>
-      <h>136</h>
+      <x>1050</x>
+      <y>780</y>
+      <w>210</w>
+      <h>102</h>
     </coordinates>
     <panel_attributes>Warehouse
 --
@@ -71,16 +73,17 @@
 + getId(): String
 + getAddress(): Address
 + getLocations(): List&lt;Location&gt;
-+ addLocation(location: Location): void</panel_attributes>
++ addLocation(location: Location): void
+bg=TRANSPARENT</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>696</x>
-      <y>544</y>
-      <w>280</w>
-      <h>96</h>
+      <x>438</x>
+      <y>588</y>
+      <w>210</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>ItemLine
 --
@@ -89,16 +92,17 @@
 --
 + &lt;&lt;create&gt;&gt; ItemLine(product: Product, quantity: int)
 + getProduct(): Product
-+ getQuantity(): int</panel_attributes>
++ getQuantity(): int
+bg=TRANSPARENT</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1048</x>
-      <y>512</y>
-      <w>296</w>
-      <h>152</h>
+      <x>702</x>
+      <y>564</y>
+      <w>222</w>
+      <h>114</h>
     </coordinates>
     <panel_attributes>SupplyOrder
 --
@@ -113,16 +117,17 @@ items: List&lt;ItemLine&gt;
 + getItems(): List&lt;ItemLine&gt;
 + addItem(itemLine: ItemLine): void
 
-</panel_attributes>
+
+bg=TRANSPARENT</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>616</x>
-      <y>296</y>
-      <w>408</w>
-      <h>168</h>
+      <x>378</x>
+      <y>402</y>
+      <w>306</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>Shipment
 --
@@ -136,16 +141,17 @@ items: List&lt;ItemLine&gt;
 + getShipmentNo(): int
 + getDate(): LocalDate
 + getItems(): List&lt;ItemLine&gt;
-+ addItem(itemLine: ItemLine): void</panel_attributes>
++ addItem(itemLine: ItemLine): void
+bg=TRANSPARENT</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1144</x>
-      <y>312</y>
-      <w>392</w>
-      <h>128</h>
+      <x>774</x>
+      <y>414</y>
+      <w>294</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Party
 --
@@ -156,16 +162,17 @@ items: List&lt;ItemLine&gt;
 + &lt;&lt;create&gt;&gt; Recipient(name: String, phoneNo: String, address: Address)
 + getName(): String
 + getPhoneNo(): String
-+ getAddress(): Address</panel_attributes>
++ getAddress(): Address
+bg=TRANSPARENT</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1624</x>
-      <y>272</y>
-      <w>320</w>
-      <h>192</h>
+      <x>1134</x>
+      <y>384</y>
+      <w>240</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>Address
 --
@@ -181,32 +188,34 @@ country: String
 + getHouseNo(): String
 + getZip(): String
 + getCity(): String
-+ getCountry(): String</panel_attributes>
++ getCountry(): String
+bg=TRANSPARENT</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1488</x>
-      <y>520</y>
-      <w>456</w>
-      <h>96</h>
+      <x>1032</x>
+      <y>570</y>
+      <w>342</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>Supplier
 --
 - cvrNumber: String
 --
 + &lt;&lt;create&gt;&gt; Supplier(name: String, phoneNo: String, cvrNumber: String, address: Address)
-+ getCvrNumber(): String</panel_attributes>
++ getCvrNumber(): String
+bg=TRANSPARENT</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>192</x>
-      <y>328</y>
-      <w>312</w>
-      <h>104</h>
+      <x>60</x>
+      <y>426</y>
+      <w>234</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>Employee
 --
@@ -215,16 +224,17 @@ country: String
 --
 + &lt;&lt;create&gt;&gt; Employee(name: String, employeeNo: String)
 + getName(): String
-+ getEmployeeNo(): int</panel_attributes>
++ getEmployeeNo(): int
+bg=TRANSPARENT</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1024</x>
-      <y>864</y>
-      <w>128</w>
-      <h>24</h>
+      <x>684</x>
+      <y>828</y>
+      <w>96</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
@@ -232,10 +242,10 @@ country: String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1408</x>
-      <y>864</y>
-      <w>120</w>
-      <h>24</h>
+      <x>972</x>
+      <y>828</y>
+      <w>90</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
@@ -243,10 +253,10 @@ country: String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>824</x>
-      <y>632</y>
-      <w>24</w>
-      <h>112</h>
+      <x>534</x>
+      <y>654</y>
+      <w>18</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
@@ -254,10 +264,10 @@ country: String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>968</x>
-      <y>584</y>
-      <w>96</w>
-      <h>24</h>
+      <x>642</x>
+      <y>618</y>
+      <w>72</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
@@ -265,10 +275,10 @@ country: String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1336</x>
-      <y>584</y>
-      <w>168</w>
-      <h>24</h>
+      <x>918</x>
+      <y>618</y>
+      <w>126</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>190.0;10.0;10.0;10.0</additional_attributes>
@@ -276,10 +286,10 @@ country: String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1472</x>
-      <y>432</y>
-      <w>224</w>
-      <h>104</h>
+      <x>1020</x>
+      <y>504</y>
+      <w>168</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>260.0;110.0;260.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
@@ -287,10 +297,10 @@ country: String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1528</x>
-      <y>352</y>
-      <w>112</w>
-      <h>24</h>
+      <x>1062</x>
+      <y>444</y>
+      <w>84</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
@@ -298,10 +308,10 @@ country: String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1768</x>
-      <y>456</y>
-      <w>24</w>
-      <h>80</h>
+      <x>1242</x>
+      <y>522</y>
+      <w>18</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
@@ -309,10 +319,10 @@ country: String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>816</x>
-      <y>456</y>
-      <w>24</w>
-      <h>104</h>
+      <x>528</x>
+      <y>522</y>
+      <w>18</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
@@ -320,10 +330,10 @@ country: String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>496</x>
-      <y>376</y>
-      <w>136</w>
-      <h>24</h>
+      <x>288</x>
+      <y>462</y>
+      <w>102</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
@@ -331,12 +341,274 @@ country: String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1016</x>
-      <y>376</y>
-      <w>144</w>
-      <h>24</h>
+      <x>678</x>
+      <y>462</y>
+      <w>108</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1506</x>
+      <y>402</y>
+      <w>180</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+ProductDBIF
+--
++ create(p: Product): Product
++ delete(p: Product): boolean
++ update(p: Product): Product
++ findAll(): List&lt;Product&gt;
++ findByBarcode(barcode: String): Product
+
+
+
+
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1506</x>
+      <y>534</y>
+      <w>180</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>ProductDB
+--
+- buildObject(rs: ResultSet): Product
+- buildObjects(rs: Resultset): List&lt;Product&gt;
+
+
+
+
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1590</x>
+      <y>474</y>
+      <w>18</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>576</y>
+      <w>870</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;280.0;1430.0;280.0;1430.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1506</x>
+      <y>786</y>
+      <w>138</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>DBConnection
+--
+_- instance: DBConnection_
+--
+- &lt;&lt;create&gt;&gt; DBConnection()
+_+ getInstance(): DBConnection_
+
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1578</x>
+      <y>576</y>
+      <w>18</w>
+      <h>222</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;350.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1716</x>
+      <y>402</y>
+      <w>192</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+ShipmentDBIF
+--
++ create(s: Shipment): Shipment
++ delete(s: Shipment): Shipment
++ update(s: Shipment): Shipment
++ findAll(): List&lt;Shipment&gt;
++ findByShipmentNo(shipmentNo: int): Shipment
+
+
+
+
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1716</x>
+      <y>534</y>
+      <w>180</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>ShipmentDB
+--
+- buildObject(rs: ResultSet): Shipment
+- buildObjects(rs: ResultSet): List&lt;Shipment&gt;
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1794</x>
+      <y>474</y>
+      <w>18</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1638</x>
+      <y>576</y>
+      <w>150</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;380.0;230.0;380.0;230.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>642</x>
+      <y>342</y>
+      <w>1326</w>
+      <h>228</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0;2190.0;10.0;2190.0;360.0;2090.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2010</x>
+      <y>396</y>
+      <w>180</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+PartyDBIF
+--
++ create(p: Party): Party
++ delete(p: Party): boolean
++ update(p: Party): Party
++ findAll(): List&lt;Party&gt;
++ findByPhoneNo(phoneNo: String): Party
+
+
+
+
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2010</x>
+      <y>528</y>
+      <w>180</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>PartyDB
+--
+- buildObject(rs: ResultSet): Party
+- buildObjects(rs: ResultSet): List&lt;Party&gt;
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2100</x>
+      <y>468</y>
+      <w>18</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1638</x>
+      <y>570</y>
+      <w>426</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;420.0;690.0;420.0;690.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>948</x>
+      <y>258</y>
+      <w>1302</w>
+      <h>312</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;260.0;10.0;10.0;2150.0;10.0;2150.0;500.0;2070.0;500.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>48</x>
+      <y>360</y>
+      <w>1380</w>
+      <h>612</h>
+    </coordinates>
+    <panel_attributes>model
+bg=RED
+fg=BLACK
+layer=-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1464</x>
+      <y>366</y>
+      <w>810</w>
+      <h>498</h>
+    </coordinates>
+    <panel_attributes>db
+fg=BLACK
+bg=CYAN</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
