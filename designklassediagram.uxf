@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.0.0">
-  <zoom_level>11</zoom_level>
+  <zoom_level>4</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>649</x>
-      <y>858</y>
-      <w>528</w>
-      <h>374</h>
+      <x>320</x>
+      <y>716</y>
+      <w>192</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>Product
 --
@@ -40,10 +40,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1320</x>
-      <y>979</y>
-      <w>385</w>
-      <h>132</h>
+      <x>592</x>
+      <y>760</y>
+      <w>140</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>Location
 --
@@ -58,10 +58,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1837</x>
-      <y>957</y>
-      <w>385</w>
-      <h>187</h>
+      <x>780</x>
+      <y>752</y>
+      <w>140</w>
+      <h>68</h>
     </coordinates>
     <panel_attributes>Warehouse
 --
@@ -80,10 +80,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>715</x>
-      <y>605</y>
-      <w>385</w>
-      <h>132</h>
+      <x>344</x>
+      <y>624</y>
+      <w>140</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>ItemLine
 --
@@ -99,10 +99,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1199</x>
-      <y>561</y>
-      <w>407</w>
-      <h>209</h>
+      <x>520</x>
+      <y>608</y>
+      <w>148</w>
+      <h>76</h>
     </coordinates>
     <panel_attributes>SupplyOrder
 --
@@ -124,10 +124,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>605</x>
-      <y>264</y>
-      <w>561</w>
-      <h>231</h>
+      <x>304</x>
+      <y>500</y>
+      <w>204</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>Shipment
 --
@@ -148,10 +148,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1331</x>
-      <y>286</y>
-      <w>539</w>
-      <h>176</h>
+      <x>568</x>
+      <y>508</y>
+      <w>196</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>Party
 --
@@ -169,10 +169,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1991</x>
-      <y>231</y>
-      <w>440</w>
-      <h>264</h>
+      <x>808</x>
+      <y>488</y>
+      <w>160</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Address
 --
@@ -195,10 +195,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1804</x>
-      <y>572</y>
-      <w>627</w>
-      <h>132</h>
+      <x>740</x>
+      <y>612</y>
+      <w>228</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>Supplier
 --
@@ -212,10 +212,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>22</x>
-      <y>308</y>
-      <w>429</w>
-      <h>143</h>
+      <x>92</x>
+      <y>516</y>
+      <w>156</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>Employee
 --
@@ -231,21 +231,21 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1166</x>
-      <y>1045</y>
-      <w>176</w>
-      <h>33</h>
+      <x>508</x>
+      <y>784</y>
+      <w>92</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;210.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1694</x>
-      <y>1045</y>
-      <w>165</w>
-      <h>33</h>
+      <x>728</x>
+      <y>784</y>
+      <w>60</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
@@ -253,10 +253,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>891</x>
-      <y>726</y>
-      <w>33</w>
-      <h>154</h>
+      <x>408</x>
+      <y>668</y>
+      <w>12</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
@@ -264,10 +264,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1089</x>
-      <y>660</y>
-      <w>132</w>
-      <h>33</h>
+      <x>480</x>
+      <y>648</y>
+      <w>48</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
@@ -275,10 +275,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1595</x>
-      <y>660</y>
-      <w>231</w>
-      <h>33</h>
+      <x>664</x>
+      <y>644</y>
+      <w>84</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>190.0;10.0;10.0;10.0</additional_attributes>
@@ -286,10 +286,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1782</x>
-      <y>451</y>
-      <w>308</w>
-      <h>143</h>
+      <x>732</x>
+      <y>568</y>
+      <w>112</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>260.0;110.0;260.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
@@ -297,10 +297,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1859</x>
-      <y>341</y>
-      <w>154</w>
-      <h>33</h>
+      <x>760</x>
+      <y>528</y>
+      <w>56</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
@@ -308,10 +308,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2189</x>
-      <y>484</y>
-      <w>33</w>
-      <h>110</h>
+      <x>880</x>
+      <y>580</y>
+      <w>12</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
@@ -319,10 +319,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>880</x>
-      <y>484</y>
-      <w>33</w>
-      <h>143</h>
+      <x>404</x>
+      <y>580</y>
+      <w>12</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
@@ -330,10 +330,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>440</x>
-      <y>374</y>
-      <w>187</w>
-      <h>33</h>
+      <x>244</x>
+      <y>540</y>
+      <w>68</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
@@ -341,10 +341,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1155</x>
-      <y>374</y>
-      <w>198</w>
-      <h>33</h>
+      <x>504</x>
+      <y>540</y>
+      <w>72</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
@@ -352,17 +352,17 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2673</x>
-      <y>264</y>
-      <w>330</w>
-      <h>143</h>
+      <x>1056</x>
+      <y>516</y>
+      <w>120</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 ProductDBIF
 --
-+ create(p: Product): Product
-+ delete(p: Product): boolean
-+ update(p: Product): Product
+//+ create(p: Product): Product
+//+ delete(p: Product): boolean
+//+ update(p: Product): Product
 + findAll(): List&lt;Product&gt;
 + findByBarcode(barcode: String): Product
 
@@ -375,10 +375,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2673</x>
-      <y>506</y>
-      <w>330</w>
-      <h>88</h>
+      <x>1056</x>
+      <y>588</y>
+      <w>120</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>ProductDB
 --
@@ -394,10 +394,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2827</x>
-      <y>396</y>
-      <w>33</w>
-      <h>132</h>
+      <x>1112</x>
+      <y>548</y>
+      <w>12</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
@@ -405,10 +405,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1166</x>
-      <y>583</y>
-      <w>1595</w>
-      <h>330</h>
+      <x>508</x>
+      <y>616</y>
+      <w>580</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;280.0;1430.0;280.0;1430.0;10.0</additional_attributes>
@@ -416,10 +416,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2673</x>
-      <y>968</y>
-      <w>253</w>
-      <h>110</h>
+      <x>1056</x>
+      <y>756</y>
+      <w>92</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>DBConnection
 --
@@ -434,10 +434,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2805</x>
-      <y>583</y>
-      <w>33</w>
-      <h>407</h>
+      <x>1104</x>
+      <y>616</y>
+      <w>12</w>
+      <h>148</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;350.0;10.0;10.0</additional_attributes>
@@ -445,10 +445,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3058</x>
-      <y>264</y>
-      <w>352</w>
-      <h>143</h>
+      <x>1196</x>
+      <y>500</y>
+      <w>128</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 ShipmentDBIF
@@ -468,10 +468,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3058</x>
-      <y>506</y>
-      <w>330</w>
-      <h>88</h>
+      <x>1196</x>
+      <y>588</y>
+      <w>120</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>ShipmentDB
 --
@@ -483,10 +483,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3201</x>
-      <y>396</y>
-      <w>33</w>
-      <h>132</h>
+      <x>1248</x>
+      <y>548</y>
+      <w>12</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
@@ -494,21 +494,21 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2915</x>
-      <y>583</y>
-      <w>275</w>
-      <h>440</h>
+      <x>1144</x>
+      <y>616</y>
+      <w>76</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;380.0;230.0;380.0;230.0;10.0</additional_attributes>
+    <additional_attributes>10.0;360.0;170.0;360.0;170.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1089</x>
-      <y>154</y>
-      <w>2431</w>
-      <h>418</h>
+      <x>480</x>
+      <y>460</y>
+      <w>884</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;100.0;10.0;10.0;2190.0;10.0;2190.0;360.0;2090.0;360.0</additional_attributes>
@@ -516,17 +516,17 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3597</x>
-      <y>253</y>
-      <w>330</w>
-      <h>143</h>
+      <x>1564</x>
+      <y>516</y>
+      <w>120</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 PartyDBIF
 --
-+ create(p: Party): Party
-+ delete(p: Party): boolean
-+ update(p: Party): Party
+// + create(p: Party): Party
+// + delete(p: Party): boolean
+// + update(p: Party): Party
 + findAll(): List&lt;Party&gt;
 + findByPhoneNo(phoneNo: String): Party
 
@@ -539,10 +539,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3597</x>
-      <y>495</y>
-      <w>330</w>
-      <h>88</h>
+      <x>1564</x>
+      <y>584</y>
+      <w>120</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>PartyDB
 --
@@ -554,43 +554,43 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3762</x>
-      <y>385</y>
-      <w>33</w>
-      <h>132</h>
+      <x>1624</x>
+      <y>548</y>
+      <w>12</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2915</x>
-      <y>572</y>
-      <w>781</w>
-      <h>484</h>
+      <x>1144</x>
+      <y>612</y>
+      <w>456</w>
+      <h>172</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;420.0;690.0;420.0;690.0;10.0</additional_attributes>
+    <additional_attributes>10.0;410.0;210.0;410.0;210.0;70.0;1120.0;70.0;1120.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1650</x>
-      <y>0</y>
-      <w>2387</w>
-      <h>572</h>
+      <x>684</x>
+      <y>404</y>
+      <w>1060</w>
+      <h>208</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;260.0;10.0;10.0;2150.0;10.0;2150.0;500.0;2070.0;500.0</additional_attributes>
+    <additional_attributes>10.0;260.0;10.0;10.0;2630.0;10.0;2630.0;500.0;2500.0;500.0</additional_attributes>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>0</x>
-      <y>187</y>
-      <w>2530</w>
-      <h>1122</h>
+      <x>84</x>
+      <y>472</y>
+      <w>920</w>
+      <h>408</h>
     </coordinates>
     <panel_attributes>model
 bg=RED
@@ -601,25 +601,532 @@ layer=-2</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>2596</x>
-      <y>198</y>
-      <w>1485</w>
-      <h>913</h>
+      <x>1032</x>
+      <y>484</y>
+      <w>1076</w>
+      <h>364</h>
     </coordinates>
     <panel_attributes>db
 fg=BLACK
-bg=CYAN</panel_attributes>
+bg=CYAN
+layer=-10</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2211</x>
-      <y>418</y>
-      <w>275</w>
-      <h>682</h>
+      <x>916</x>
+      <y>556</y>
+      <w>72</w>
+      <h>248</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>200.0;10.0;230.0;10.0;230.0;600.0;10.0;600.0</additional_attributes>
+    <additional_attributes>130.0;10.0;160.0;10.0;160.0;600.0;10.0;600.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1272</x>
+      <y>728</y>
+      <w>120</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>LocationDB
+--
+- buildObject(rs: ResultSet): Location
+- buildObjects(rs: ResultSet): List&lt;Location&gt;
+layer=2
+fg=BLACK
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1260</x>
+      <y>660</y>
+      <w>140</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+LocationDBIF
+--
+// + create(p: Party): Party
+// + delete(p: Party): boolean
+// + update(p: Party): Party
++ findAll(): List&lt;Location&gt;
++ findByLocationCode(locationCode: String): Location
+
+
+
+
+bg=TRANSPARENT
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1328</x>
+      <y>692</y>
+      <w>12</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1144</x>
+      <y>756</y>
+      <w>176</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;420.0;90.0;420.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1424</x>
+      <y>660</y>
+      <w>140</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+WarehouseDBIF
+--
+// + create(p: Party): Party
+// + delete(p: Party): boolean
+// + update(p: Party): Party
++ findAll(): List&lt;Warehouse&gt;
++ findById(id: String): Warehouse
+
+
+
+
+bg=TRANSPARENT
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1436</x>
+      <y>724</y>
+      <w>124</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>WarehouseDB
+--
+- buildObject(rs: ResultSet): Warehouse
+- buildObjects(rs: ResultSet): List&lt;Warehouse&gt;
+layer=2
+fg=BLACK
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1492</x>
+      <y>692</y>
+      <w>12</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1132</x>
+      <y>752</y>
+      <w>348</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;150.0;850.0;150.0;850.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>756</y>
+      <w>688</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;360.0;1700.0;360.0;1700.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>752</y>
+      <w>636</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;270.0;1570.0;270.0;1570.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1376</x>
+      <y>500</y>
+      <w>140</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+ItemLineDBIF
+--
++ create(i: ItemLine): ItemLine
++ delete(i: ItemLine): ItemLine
++ update(i: ItemLine): ItemLine
++ findAll(): List&lt;ItemLine&gt;
++ findByShipmentNo(shipmentNo: int): List&lt;ItemLine&gt;
++ findById(id: int): ItemLine
+
+
+
+
+bg=TRANSPARENT
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1384</x>
+      <y>584</y>
+      <w>120</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>ItemLineDB
+--
+- buildObject(rs: ResultSet): ItemLine
+- buildObjects(rs: ResultSet): List&lt;ItemLine&gt;
+bg=TRANSPARENT
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1440</x>
+      <y>556</y>
+      <w>12</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1144</x>
+      <y>612</y>
+      <w>264</w>
+      <h>164</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;390.0;190.0;390.0;190.0;50.0;640.0;50.0;640.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>432</y>
+      <w>1280</w>
+      <h>228</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;550.0;10.0;550.0;10.0;10.0;3180.0;10.0;3180.0;430.0;3060.0;430.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1592</x>
+      <y>660</y>
+      <w>132</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+EmployeeDBIF
+--
+// + create(p: Party): Party
+// + delete(p: Party): boolean
+// + update(p: Party): Party
++ findAll(): List&lt;Employee&gt;
++ findByEmployeeNo(employeeNo: int): Employee
+
+
+
+
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1600</x>
+      <y>724</y>
+      <w>120</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>EmployeeDB
+--
+- buildObject(rs: ResultSet): Employee
+- buildObjects(rs: ResultSet): List&lt;Employee&gt;
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1656</x>
+      <y>692</y>
+      <w>12</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>752</y>
+      <w>504</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;180.0;1240.0;180.0;1240.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>208</x>
+      <y>564</y>
+      <w>1468</w>
+      <h>364</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;890.0;3650.0;890.0;3650.0;480.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1756</x>
+      <y>656</y>
+      <w>132</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+SupplyOrderDBIF
+--
++ create(s: SupplyOrder): SupplyOrder
++ delete(s: SupplyOrder): SupplyOrder
++ update(s: SupplyOrder): SupplyOrder
++ findAll(): List&lt;SupplyOrder&gt;
++ findByOrderNo(orderNo: int): SupplyOrder
+
+
+
+
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1760</x>
+      <y>736</y>
+      <w>124</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>SupplyOrderDB
+--
+- buildObject(rs: ResultSet): SupplyOrder
+- buildObjects(rs: ResultSet): List&lt;SupplyOrder&gt;
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1816</x>
+      <y>704</y>
+      <w>12</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1108</x>
+      <y>764</y>
+      <w>680</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;170.0;1680.0;170.0;1680.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>556</x>
+      <y>680</y>
+      <w>1304</w>
+      <h>268</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;650.0;3240.0;650.0;3240.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1760</x>
+      <y>516</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+AddressDBIF
+--
+// + create(p: Party): Party
+// + delete(p: Party): boolean
+// + update(p: Party): Party
++ findAll(): List&lt;Address&gt;
++ findByAddressId(id: int): Address
+
+
+
+
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1760</x>
+      <y>584</y>
+      <w>120</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>AddressDB
+--
+- buildObject(rs: ResultSet): Address
+- buildObjects(rs: ResultSet): List&lt;Address&gt;
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1144</x>
+      <y>612</y>
+      <w>640</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;430.0;240.0;430.0;240.0;90.0;1580.0;90.0;1580.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1816</x>
+      <y>548</y>
+      <w>12</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>916</x>
+      <y>448</y>
+      <w>1000</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0;2480.0;10.0;2480.0;380.0;2410.0;380.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1940</x>
+      <y>516</y>
+      <w>128</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+SupplierDBIF
+--
+// + create(p: Party): Party
+// + delete(p: Party): boolean
+// + update(p: Party): Party
++ findAll(): List&lt;Supplier&gt;
++ findByCvrNumber(cvrNumber: String): Supplier
+
+
+
+
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1948</x>
+      <y>584</y>
+      <w>116</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>SupplierDB
+--
+- buildObject(rs: ResultSet): Supplier
+- buildObjects(rs: ResultSet): List&lt;Supplier&gt;
+bg=TRANSPARENT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2004</x>
+      <y>548</y>
+      <w>12</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1096</x>
+      <y>612</y>
+      <w>888</w>
+      <h>236</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;460.0;10.0;570.0;2200.0;570.0;2200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>964</x>
+      <y>468</y>
+      <w>1120</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;430.0;130.0;430.0;130.0;10.0;2780.0;10.0;2780.0;330.0;2750.0;330.0</additional_attributes>
   </element>
 </diagram>
