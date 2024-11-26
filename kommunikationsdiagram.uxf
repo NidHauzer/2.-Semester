@@ -94,13 +94,13 @@
     <coordinates>
       <x>910</x>
       <y>250</y>
-      <w>350</w>
+      <w>320</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>
 1: createShipment(employeeNo)
 2: addItemLine(barcode, quantity, shipmentNo)
-3: addRecipientToShipment(phoneNo, shipmentNo)
+3: addPartyToShipment(phoneNo, shipmentNo)
 
 lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
@@ -161,7 +161,7 @@ lt=-</panel_attributes>
     <panel_attributes>lt=-
 1.1: createShipment(employee): Shipment
 2.1 addItemLine(barcode, quantity, shipmentNo): ItemLine
-3.1 addRecipientToShipment(): Recipient</panel_attributes>
+3.1 addPartyToShipment(): Recipient</panel_attributes>
     <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -186,7 +186,7 @@ lt=-</panel_attributes>
       <w>100</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>: Recipient</panel_attributes>
+    <panel_attributes>: Party</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -208,7 +208,7 @@ lt=-</panel_attributes>
       <w>100</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>: RecipientDB</panel_attributes>
+    <panel_attributes>: PartyDB</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -252,7 +252,7 @@ lt=-</panel_attributes>
       <w>150</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>: RecipientController</panel_attributes>
+    <panel_attributes>: PartyController</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -294,7 +294,7 @@ lt=-</panel_attributes>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=-
-3.1.1: findRecipientByPhoneNo(phoneNo): Recipient</panel_attributes>
+3.1.1: findPartyByPhoneNo(phoneNo): Recipient</panel_attributes>
     <additional_attributes>10.0;40.0;10.0;20.0;990.0;20.0;990.0;40.0</additional_attributes>
   </element>
   <element>
@@ -417,11 +417,11 @@ length, type, amount)
     <coordinates>
       <x>2020</x>
       <y>550</y>
-      <w>300</w>
+      <w>280</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>lt=-
-3.1.1.1: findRecipientByPhoneNo(phoneNo)</panel_attributes>
+3.1.1.1: findPartyByPhoneNo(phoneNo)</panel_attributes>
     <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -433,7 +433,7 @@ length, type, amount)
       <h>370</h>
     </coordinates>
     <panel_attributes>lt=-
-3.1.1.1.1: find(phoneNo): Recipient</panel_attributes>
+3.1.1.1.1: find(phoneNo): Party</panel_attributes>
     <additional_attributes>10.0;290.0;10.0;350.0;790.0;350.0;790.0;10.0;840.0;10.0</additional_attributes>
   </element>
   <element>
