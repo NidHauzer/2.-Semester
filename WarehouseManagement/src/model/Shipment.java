@@ -1,9 +1,9 @@
-packagem model;
+package model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
+	
 public class Shipment {
     private Party party; 
     private int shipmentNo; 
