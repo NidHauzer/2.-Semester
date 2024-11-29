@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="15.0.0">
+<diagram program="umlet" version="15.1">
   <zoom_level>10</zoom_level>
   <element>
     <id>UMLClass</id>
@@ -161,7 +161,7 @@ lt=-</panel_attributes>
     <panel_attributes>lt=-
 1.1: createShipment(employee): Shipment
 2.1 addItemLine(barcode, quantity, shipmentNo): ItemLine
-3.1 addPartyToShipment(): Recipient</panel_attributes>
+3.1 addPartyToShipment(): Party</panel_attributes>
     <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -169,13 +169,13 @@ lt=-</panel_attributes>
     <coordinates>
       <x>910</x>
       <y>550</y>
-      <w>370</w>
+      <w>350</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>lt=-
 1.2.1: createShipment(employee)
 2.1.1: findShipment(shipmentNo): Shipment
-3.1.2: addRecipientToShipment(phoneNo, shipmentNo)</panel_attributes>
+3.1.2: addPartyToShipment(phoneNo, shipmentNo)</panel_attributes>
     <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -294,7 +294,7 @@ lt=-</panel_attributes>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=-
-3.1.1: findPartyByPhoneNo(phoneNo): Recipient</panel_attributes>
+3.1.1: findPartyByPhoneNo(phoneNo): Party</panel_attributes>
     <additional_attributes>10.0;40.0;10.0;20.0;990.0;20.0;990.0;40.0</additional_attributes>
   </element>
   <element>
