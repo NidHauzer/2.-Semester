@@ -25,12 +25,5 @@ class DBConnectionTest {
 		Connection con = dbc.getConnection();
 		assertNotNull(con);
 	}
-	
-	//Simple test for testing the "assertNotNull" function. Should fail
-	@Test
-	void testConnectionNull() {
-		Connection con = null;
-		assertNotNull(con);
-	}
 
 }
