@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="15.0.0">
+<diagram program="umlet" version="15.1">
   <help_text>// Uncomment the following line to change the fontsize and font:
 fontsize=10
 // fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
@@ -28,7 +28,7 @@ fontsize=10
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>705</x>
+      <x>495</x>
       <y>90</y>
       <w>90</w>
       <h>150</h>
@@ -39,7 +39,7 @@ fontsize=10
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1155</x>
+      <x>945</x>
       <y>180</y>
       <w>150</w>
       <h>45</h>
@@ -50,7 +50,7 @@ fontsize=10
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>765</x>
+      <x>555</x>
       <y>225</y>
       <w>45</w>
       <h>615</h>
@@ -61,7 +61,7 @@ fontsize=10
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1215</x>
+      <x>1005</x>
       <y>210</y>
       <w>45</w>
       <h>630</h>
@@ -72,7 +72,7 @@ fontsize=10
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>765</x>
+      <x>555</x>
       <y>255</y>
       <w>495</w>
       <h>60</h>
@@ -84,7 +84,7 @@ createShipment()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>765</x>
+      <x>555</x>
       <y>330</y>
       <w>495</w>
       <h>60</h>
@@ -96,7 +96,7 @@ addLineItem(barcode, quantity)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>765</x>
+      <x>555</x>
       <y>405</y>
       <w>495</w>
       <h>60</h>
@@ -108,7 +108,7 @@ name, barcode</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>765</x>
+      <x>555</x>
       <y>495</y>
       <w>495</w>
       <h>60</h>
@@ -120,7 +120,7 @@ addReceiver(streetName, houseNo, zip, city, country)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>765</x>
+      <x>555</x>
       <y>630</y>
       <w>495</w>
       <h>60</h>
@@ -132,7 +132,7 @@ finalizeShipment()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>765</x>
+      <x>555</x>
       <y>555</y>
       <w>495</w>
       <h>60</h>
@@ -144,7 +144,7 @@ streetName, houseNo, zip, city, country</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>765</x>
+      <x>555</x>
       <y>705</y>
       <w>495</w>
       <h>60</h>
@@ -156,24 +156,12 @@ confirmation</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>690</x>
+      <x>480</x>
       <y>315</y>
       <w>630</w>
       <h>150</h>
     </coordinates>
     <panel_attributes>loop</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>765</x>
-      <y>360</y>
-      <w>495</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-(restock option)</panel_attributes>
-    <additional_attributes>10.0;10.0;310.0;40.0</additional_attributes>
   </element>
 </diagram>
