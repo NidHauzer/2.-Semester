@@ -29,18 +29,18 @@ fontsize=10
     <id>UMLActor</id>
     <coordinates>
       <x>495</x>
-      <y>90</y>
-      <w>90</w>
+      <y>75</y>
+      <w>150</w>
       <h>150</h>
     </coordinates>
-    <panel_attributes>Aktør</panel_attributes>
+    <panel_attributes>Lager Medarbejder</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>945</x>
-      <y>180</y>
+      <y>165</y>
       <w>150</w>
       <h>45</h>
     </coordinates>
@@ -51,7 +51,7 @@ fontsize=10
     <id>Relation</id>
     <coordinates>
       <x>555</x>
-      <y>225</y>
+      <y>210</y>
       <w>45</w>
       <h>615</h>
     </coordinates>
@@ -62,7 +62,7 @@ fontsize=10
     <id>Relation</id>
     <coordinates>
       <x>1005</x>
-      <y>210</y>
+      <y>195</y>
       <w>45</w>
       <h>630</h>
     </coordinates>
@@ -73,7 +73,7 @@ fontsize=10
     <id>Relation</id>
     <coordinates>
       <x>555</x>
-      <y>255</y>
+      <y>240</y>
       <w>495</w>
       <h>60</h>
     </coordinates>
@@ -85,7 +85,7 @@ createShipment()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>555</x>
-      <y>330</y>
+      <y>315</y>
       <w>495</w>
       <h>60</h>
     </coordinates>
@@ -97,7 +97,7 @@ addLineItem(barcode, quantity)</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>555</x>
-      <y>405</y>
+      <y>375</y>
       <w>495</w>
       <h>60</h>
     </coordinates>
@@ -109,19 +109,20 @@ name, barcode</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>555</x>
-      <y>495</y>
+      <y>480</y>
       <w>495</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-addReceiver(streetName, houseNo, zip, city, country)</panel_attributes>
+addReceiver(streetName, houseNo, zip, city, country)
+</panel_attributes>
     <additional_attributes>310.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>555</x>
-      <y>630</y>
+      <y>615</y>
       <w>495</w>
       <h>60</h>
     </coordinates>
@@ -133,7 +134,7 @@ finalizeShipment()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>555</x>
-      <y>555</y>
+      <y>540</y>
       <w>495</w>
       <h>60</h>
     </coordinates>
@@ -145,7 +146,7 @@ streetName, houseNo, zip, city, country</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>555</x>
-      <y>705</y>
+      <y>690</y>
       <w>495</w>
       <h>60</h>
     </coordinates>
@@ -156,12 +157,24 @@ confirmation</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>480</x>
-      <y>315</y>
-      <w>630</w>
-      <h>150</h>
+      <x>510</x>
+      <y>300</y>
+      <w>570</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>loop</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1035</x>
+      <y>480</y>
+      <w>390</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>addParty istedfor addReceiver??????
+bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
