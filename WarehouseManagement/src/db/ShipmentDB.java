@@ -16,12 +16,14 @@ import model.Shipment;
 public class ShipmentDB implements ShipmentDBIF {
 
 	DBConnection dbc = DBConnection.getInstance();
-	PartyDBIF pdb;
+	PartyDB pdb;
 	
 	@Override
 	public Shipment create(Shipment s) throws SQLException {
 		// TODO Auto-generated method stub
 		return null;
+		
+		
 	}
 
 	@Override
