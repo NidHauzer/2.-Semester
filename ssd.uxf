@@ -170,7 +170,7 @@ confirmation</panel_attributes>
     <coordinates>
       <x>1035</x>
       <y>480</y>
-      <w>390</w>
+      <w>300</w>
       <h>75</h>
     </coordinates>
     <panel_attributes>addParty istedfor addReceiver??????
