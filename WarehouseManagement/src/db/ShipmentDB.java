@@ -18,12 +18,19 @@ public class ShipmentDB implements ShipmentDBIF {
 	DBConnection dbc = DBConnection.getInstance();
 	PartyDB pdb;
 	
-	@Override
 	public Shipment create(Shipment s) throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		String phoneNo = s.getParty().getPhoneNo();
+		LocalDate date = s.getDate();
+		int employeeNo = s.getEmployee().getEmployeeNo();
 		
+		Connection con = dbc.getConnection();
+		PreparedStatement p = con.prepareStatement("INSERT INTO Shipment VALUES (?, ?, ?)");
+		p.setString(0, phoneNo);
+		p.setDate(1, Date.valueOf(date));
+		p.setInt(2, employeeNo);
+		ResultSet rs = p.executeQuery();
 		
+		return buildObject(rs);
 	}
 
 	@Override
