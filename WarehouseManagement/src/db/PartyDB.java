@@ -29,9 +29,12 @@ public class PartyDB implements PartyDBIF {
 		Connection con = dbc.getConnection();
 		PreparedStatement p = con.prepareStatement("SELECT * FROM Party WHERE phoneNo = ?");
 		p.setString(1, phoneNo);
-		ResultSet rs = p.executeQuery();
 		
-		if(rs.next()) party = buildObject(rs);
+		try(ResultSet rs = p.executeQuery()) {
+			if(rs.next()) party = buildObject(rs);
+		} catch (SQLException e) {
+			party = null;
+		}
 		
 		return party;
 	}
