@@ -36,12 +36,16 @@ public class ShipmentDB implements ShipmentDBIF {
 		p.setDate(2, Date.valueOf(date));
 		p.setInt(3, employeeNo);
 		
+		//gets the number of affected rows of the statement
 		int affectedRows = p.executeUpdate();
 		
+		//if the number of affected rows is 0, no shipment was created
 		if(affectedRows == 0) throw new SQLException("Creating shipment failed, no rows affected.");
 		
+		//get the newly made shipmentNo and set it on the shipment object that is to be returned
+		//if no shipmentNo was found, nothing was created in the database
 		try(ResultSet rs = p.getGeneratedKeys()){
-			if(rs.next()) shipment.setShipmnetNo(rs.getInt(1)); 
+			if(rs.next()) shipment.setShipmentNo(rs.getInt(1)); 
 			else {
 				throw new SQLException("Creating shipment failed, no shipment number obtained.");
 			}
@@ -52,10 +56,23 @@ public class ShipmentDB implements ShipmentDBIF {
 
 	@Override
 	public List<Shipment> findAll() throws SQLException {
+		List<Shipment> list;
+		
 		Connection con = dbc.getConnection();
 		Statement s = con.createStatement();
-		ResultSet rs = s.executeQuery("SELECT * FROM Shipment");
-		return buildObjects(rs);
+		ResultSet rs = s.executeQuery("SELECT *, Employee.name AS EmployeeName, Party.name AS PartyName "
+				+ "FROM Shipment "
+				+ "JOIN Employee ON Shipment.employeeNo = Employee.employeeNo "
+				+ "JOIN Party ON Shipment.phoneNo = Party.phoneNo "
+				+ "JOIN Address ON Party.addressId = Address.addressId "
+				+ "JOIN ZipCity ON Address.zip = ZipCity.zip");
+		if(rs.next()) list = buildObjects(rs);
+		else {
+			throw new SQLException("No shipments were found.");
+		}
+		
+		return list;
+		
 	}
 
 	@Override
@@ -111,9 +128,9 @@ public class ShipmentDB implements ShipmentDBIF {
 	
 	public List<Shipment> buildObjects(ResultSet rs) throws SQLException {
 		ArrayList<Shipment> list = new ArrayList();
-		while(rs.next()) {
+		do {
 			list.add(buildObject(rs));
-		}
+		} while(rs.next());
 		return list;
 	}
 

@@ -54,7 +54,7 @@ public class Shipment {
     }
     
     // Setter for shipmentNo
-    public void setShipmnetNo(int shipmentNo) {
+    public void setShipmentNo(int shipmentNo) {
     	this.shipmentNo = shipmentNo;
     }
 

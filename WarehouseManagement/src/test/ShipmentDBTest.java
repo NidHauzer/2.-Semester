@@ -30,5 +30,9 @@ public class ShipmentDBTest {
 //		}
 		
 		System.out.println("Created shipment with shipment number " + sdb.create(shipment).getShipmentNo());
+	
+		for(Shipment i : sdb.findAll()) {
+			System.out.println(i.getShipmentNo());
+		}
 	}
 }
