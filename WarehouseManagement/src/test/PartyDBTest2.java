@@ -16,6 +16,5 @@ public class PartyDBTest2 {
 		PartyDB pdb = new PartyDB();		
 		System.out.println(pdb.findByPhoneNo("26191604").getName());
 		System.out.println(pdb.findByPhoneNo("26191604").getAddress().getCity());
-		System.out.println("Hej mus");
 	}
 }
