@@ -9,6 +9,8 @@ import model.*;
 
 public class ShipmentDBTest {
 	public static void main(String args[]) throws SQLException {
+		
+		
 		ShipmentDB sdb = new ShipmentDB();
 		PartyDB pdb = new PartyDB();
 		

@@ -34,8 +34,9 @@ public class PartyDB implements PartyDBIF {
 		
 		try(ResultSet rs = p.executeQuery()) {
 			if(rs.next()) party = buildObject(rs);
-		} catch (SQLException e) {
-			party = null;
+			else {
+				throw new SQLException("Party was not found.");
+			}
 		}
 		
 		return party;

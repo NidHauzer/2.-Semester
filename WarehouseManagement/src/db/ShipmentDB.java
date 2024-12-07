@@ -72,7 +72,6 @@ public class ShipmentDB implements ShipmentDBIF {
 		}
 		
 		return list;
-		
 	}
 
 	@Override
@@ -127,7 +126,7 @@ public class ShipmentDB implements ShipmentDBIF {
 	}
 	
 	public List<Shipment> buildObjects(ResultSet rs) throws SQLException {
-		ArrayList<Shipment> list = new ArrayList();
+		List<Shipment> list = new ArrayList<Shipment>();
 		do {
 			list.add(buildObject(rs));
 		} while(rs.next());
