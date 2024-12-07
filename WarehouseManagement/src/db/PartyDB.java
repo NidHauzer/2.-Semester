@@ -14,7 +14,6 @@ import model.Party;
 public class PartyDB implements PartyDBIF {
 
 	DBConnection dbc = DBConnection.getInstance();
-	AddressDBIF adb;
 	
 	public List<Party> findAll() throws SQLException {
 		Connection con = dbc.getConnection();
@@ -27,7 +26,10 @@ public class PartyDB implements PartyDBIF {
 		Party party = null;
 		
 		Connection con = dbc.getConnection();
-		PreparedStatement p = con.prepareStatement("SELECT * FROM Party WHERE phoneNo = ?");
+		PreparedStatement p = con.prepareStatement("SELECT * FROM Party "
+				+ "JOIN Address ON Party.addressId = Address.addressId "
+				+ "JOIN ZipCity on Address.zip = ZipCity.zip "
+				+ "WHERE phoneNo = ?");
 		p.setString(1, phoneNo);
 		
 		try(ResultSet rs = p.executeQuery()) {
@@ -40,17 +42,22 @@ public class PartyDB implements PartyDBIF {
 	}
 	
 	private Party buildObject(ResultSet rs) throws SQLException {
-		adb = new AddressDB();
+		String country = rs.getString("country");
+		String city = rs.getString("city");
+		String zip = rs.getString("zip");
+		int houseNo = rs.getInt("houseNo");
+		String streetName = rs.getString("streetName");
+		
+		Address address = new Address(streetName, houseNo, zip, city, country);
 		
 		String name = rs.getString("name");
 		String phoneNo = rs.getString("phoneNo");
-		Address address = adb.findByAddressId(rs.getInt("addressId"));
 		
 		return new Party(name, phoneNo, address);
 	}
 	
 	private List<Party> buildObjects(ResultSet rs) throws SQLException {
-		ArrayList<Party> list = new ArrayList();
+		ArrayList<Party> list = new ArrayList<Party>();
 		while(rs.next()) {
 			list.add(buildObject(rs));
 		}
