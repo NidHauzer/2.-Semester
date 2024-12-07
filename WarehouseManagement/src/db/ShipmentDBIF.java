@@ -7,8 +7,6 @@ import model.Shipment;
 
 public interface ShipmentDBIF {
 	public Shipment create(Shipment s) throws SQLException;
-	public boolean delete(Shipment s) throws SQLException;
-	public Shipment update(Shipment s) throws SQLException;
 	public List<Shipment> findAll() throws SQLException;
 	public Shipment findByShipmentNo(int shipmentNo) throws SQLException;
 }
