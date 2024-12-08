@@ -14,9 +14,23 @@ public class ItemLineDB implements ItemLineDBIF {
 
 	DBConnection dbc = DBConnection.getInstance();
 	
-	public ItemLine create(ItemLine itemLine) throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+	public ItemLine create(ItemLine itemLine, int shipmentNo) throws SQLException {
+		String barcode = itemLine.getProduct().getBarcode();
+		int quantity = itemLine.getQuantity();
+		
+		Connection con = dbc.getConnection();
+		PreparedStatement p = con.prepareStatement("INSERT INTO ItemLine VALUES ("
+				+ "?, " //quantity
+				+ "?, " //shipmentNo
+				+ "null, "
+				+ "?)"); //barcode
+		p.setInt(1, quantity);
+		p.setInt(2, shipmentNo);
+		p.setString(3, barcode);
+		int affectedRows = p.executeUpdate();
+		
+		if(affectedRows == 0) throw new SQLException("No ItemLine was created.");
+		return itemLine;
 	}
 
 	public List<ItemLine> findByShipmentNo(int shipmentNo) throws SQLException {
