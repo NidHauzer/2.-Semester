@@ -355,15 +355,15 @@ bg=TRANSPARENT</panel_attributes>
     <coordinates>
       <x>1446</x>
       <y>474</y>
-      <w>180</w>
-      <h>54</h>
+      <w>186</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 ProductDBIF
 --
 //+ create(p: Product): Product
 //+ delete(p: Product): boolean
-//+ update(p: Product): Product
++ updateStock(p: Product, quantity: int): Product
 + findAll(): List&lt;Product&gt;
 + findByBarcode(barcode: String): Product
 
@@ -396,12 +396,12 @@ bg=TRANSPARENT</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1530</x>
-      <y>522</y>
+      <y>528</y>
       <w>18</w>
-      <h>72</h>
+      <h>66</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
