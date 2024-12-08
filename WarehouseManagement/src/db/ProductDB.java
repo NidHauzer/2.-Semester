@@ -51,6 +51,31 @@ public class ProductDB implements ProductDBIF {
 		return product;
 	}
 	
+	public Product updateStock(Product product, int quantity) throws SQLException {
+		Product newProduct = product;
+		int newStock;
+		Connection con = dbc.getConnection();
+		PreparedStatement pGet = con.prepareStatement("SELECT * "
+				+ "FROM Product "
+				+ "WHERE barcode = ?");
+		pGet.setString(1, product.getBarcode());
+		try(ResultSet rs = pGet.executeQuery()){
+			if(rs.next()) newStock = rs.getInt("quantityInStock") + quantity;
+			else {
+				throw new SQLException("No product was found.");
+			}
+		}
+		PreparedStatement pUpdate = con.prepareStatement("UPDATE Product "
+				+ "SET quantityInStock = ? "
+				+ "WHERE barcode = ?");
+		pUpdate.setInt(1, newStock);
+		pUpdate.setString(2, product.getBarcode());
+		int affectedRows = pUpdate.executeUpdate();
+		if(affectedRows == 0) throw new SQLException("No update was made.");
+		newProduct.setQuantityInStock(newStock);
+		return newProduct;
+	}
+	
 	// Builds an object from ResultSet and returns it
 	// Throws SQLException if there is something wrong with the connection
 	private Product buildObject(ResultSet rs) throws SQLException {		
@@ -75,5 +100,7 @@ public class ProductDB implements ProductDBIF {
 		
 		return list;
 	}
+
+
 	
 }

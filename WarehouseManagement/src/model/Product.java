@@ -41,20 +41,11 @@ public class Product {
 		return amount;
 	}
 	
-//	public void setQuantityInStock(int q) {
-//		this.quantityInStock = q;
-//	}
 	public void setMinStock(int m) {
 		this.minStock = m;
 	}
 	
-	public void removeQuantityInStock(int q) {
-		if(this.quantityInStock - q < 0) this.quantityInStock = 0;
-		else {
-			this.quantityInStock -= q;
-		}
-	}
-	public void addQuantityInStock(int q) {
-		this.quantityInStock += q;
+	public void setQuantityInStock(int q) {
+		this.quantityInStock = q;
 	}
 }

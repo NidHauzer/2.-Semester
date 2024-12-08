@@ -16,5 +16,8 @@ public class ProductDBTest {
 		for(Product product : pdb.findAll()) {
 			System.out.println(product.getColour());
 		}
+		
+		Product pUpdate = pdb.updateStock(p, -10);
+		System.out.println(pUpdate.getType() + " " + pUpdate.getQuantityInStock());
 	}
 }
