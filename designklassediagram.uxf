@@ -1069,7 +1069,8 @@ bg=TRANSPARENT</panel_attributes>
 
 --
 + findProductByBarcode(barcode: String): Product
-+ createItemLine(p: Product, quantity: int) ItemLine</panel_attributes>
++ createItemLine(p: Product, quantity: int): ItemLine
++ updateStock(quantity: int): Product</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
