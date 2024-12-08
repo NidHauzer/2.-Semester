@@ -41,7 +41,7 @@ public class EmployeeDB implements EmployeeDBIF {
 		
 		if(rs.next()) list = buildObjects(rs);
 		else {
-			throw new SQLException("No employess were found.");
+			throw new SQLException("No employees were found.");
 		}
 		
 		return list;
