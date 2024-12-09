@@ -1,4 +1,8 @@
-USE WarehouseManagement
+USE WarehouseManagement;
+
+--Remove tables if they exist
+DROP TABLE IF EXISTS Warehouse, Location, ItemLine, Product, SupplyOrder, Shipment, Party, Supplier, Address, ZipCity, Employee
+GO
 
 CREATE TABLE Employee (
     name VARCHAR(128) NOT NULL,
@@ -28,11 +32,6 @@ CREATE TABLE Party (
     name VARCHAR(128),
     phoneNo VARCHAR(128) NOT NULL PRIMARY KEY,
     addressId int NOT NULL FOREIGN KEY REFERENCES Address(addressId)
-)
-
-CREATE TABLE Warehouse (
-    addressId int NOT NULL FOREIGN KEY REFERENCES Address(addressId),
-    warehouseId int NOT NULL PRIMARY KEY
 )
 
 CREATE TABLE Shipment (
@@ -70,5 +69,23 @@ CREATE TABLE ItemLine (
 CREATE TABLE Location (
     locationCode VARCHAR(128) NOT NULL PRIMARY KEY,
     barcode VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES Product(barcode),
-    warehouseId int NOT NULL FOREIGN KEY REFERENCES Warehouse(warehouseId)
 )
+
+CREATE TABLE Warehouse (
+    addressId int NOT NULL FOREIGN KEY REFERENCES Address(addressId),
+    warehouseId varchar(128) NOT NULL PRIMARY KEY,
+    locationCode varchar(128) NOT NULL FOREIGN KEY REFERENCES Location(locationCode)
+)
+
+--Insert some test data
+INSERT INTO ZipCity VALUES ('9300', 'Sæby');
+
+INSERT INTO Address VALUES ('Gl. Aalborgvej', 55, '9300', 'Denmark')
+
+INSERT INTO Party VALUES ('Jonas Vittrup Biegel', '11223344', 1)
+
+INSERT INTO Product VALUES ('AAA123', '100', '10', 'Light Beige Blonde Mix 16B/60B', 'Tape Extension', '50', '50')
+
+INSERT INTO Location VALUES ('A1', 'AAA123')
+
+INSERT INTO Employee VALUES ('Thea', '1')

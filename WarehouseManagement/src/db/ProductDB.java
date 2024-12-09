@@ -17,25 +17,68 @@ public class ProductDB implements ProductDBIF {
 	// Returns a list of all products in the database
 	// Throws SQLException
 	public List<Product> findAll() throws SQLException {
+		List<Product> list = new ArrayList();
+		
 		Connection con = dbc.getConnection();
 		Statement s = con.createStatement();
 		ResultSet rs = s.executeQuery("SELECT * FROM Product");
-		return buildObjects(rs);
+		
+		if(rs.next()) list = buildObjects(rs);
+		else {
+			throw new SQLException("No products were found.");
+		}
+		
+		return list;
 	}
 
 	// Returns a specific product with the given barcode
 	// Throws SQLException
 	public Product findByBarcode(String barcode) throws SQLException {
+		Product product = null;
+		
 		Connection con = dbc.getConnection();
-		PreparedStatement p = con.prepareStatement("SELECT * FROM Product WHERE barcode = ?");
-		p.setString(0, barcode);
-		ResultSet rs = p.executeQuery();
-		return buildObject(rs);
+		PreparedStatement p = con.prepareStatement("SELECT * FROM Product "
+				+ "WHERE barcode = ?");
+		p.setString(1, barcode);
+		
+		try(ResultSet rs = p.executeQuery()) {
+			if(rs.next()) product = buildObject(rs);
+			else {
+				throw new SQLException("No product was found.");
+			}
+		}
+		
+		return product;
+	}
+	
+	public Product updateStock(Product product, int quantity) throws SQLException {
+		Product newProduct = product;
+		int newStock;
+		Connection con = dbc.getConnection();
+		PreparedStatement pGet = con.prepareStatement("SELECT * "
+				+ "FROM Product "
+				+ "WHERE barcode = ?");
+		pGet.setString(1, product.getBarcode());
+		try(ResultSet rs = pGet.executeQuery()){
+			if(rs.next()) newStock = rs.getInt("quantityInStock") + quantity;
+			else {
+				throw new SQLException("No product was found.");
+			}
+		}
+		PreparedStatement pUpdate = con.prepareStatement("UPDATE Product "
+				+ "SET quantityInStock = ? "
+				+ "WHERE barcode = ?");
+		pUpdate.setInt(1, newStock);
+		pUpdate.setString(2, product.getBarcode());
+		int affectedRows = pUpdate.executeUpdate();
+		if(affectedRows == 0) throw new SQLException("No update was made.");
+		newProduct.setQuantityInStock(newStock);
+		return newProduct;
 	}
 	
 	// Builds an object from ResultSet and returns it
 	// Throws SQLException if there is something wrong with the connection
-	private Product buildObject(ResultSet rs) throws SQLException {
+	private Product buildObject(ResultSet rs) throws SQLException {		
 		String barcode = rs.getString("barcode");
 		int quantityInStock = rs.getInt("quantityInStock");
 		int minStock = rs.getInt("minStock");
@@ -51,11 +94,13 @@ public class ProductDB implements ProductDBIF {
 	private List<Product> buildObjects(ResultSet rs) throws SQLException {
 		ArrayList<Product> list = new ArrayList();
 		
-		while(rs.next()) {
+		do {
 			list.add(buildObject(rs));
-		}
+		} while(rs.next());
 		
 		return list;
 	}
+
+
 	
 }

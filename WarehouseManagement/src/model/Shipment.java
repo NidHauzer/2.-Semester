@@ -8,13 +8,24 @@ public class Shipment {
     private Party party; 
     private int shipmentNo; 
     private LocalDate date; 
+    private Employee employee;
     private List<ItemLine> items; 
 
-    // Constructor
-    public Shipment(Party party, int shipmentNo, LocalDate date) {
+    // Constructor with and without shipmentNo
+    // With shipmentNo is used for returning the object from the database
+    // Without shipmentNo is used for making a database object from a Shipment object
+    public Shipment(Party party, LocalDate date, Employee employee) {
+    	this.party = party;
+    	this.date = date;
+    	this.employee = employee;
+    	this.items = new ArrayList<>();
+    }
+    
+    public Shipment(Party party, LocalDate date, Employee employee, int shipmentNo) {
         this.party = party;
         this.shipmentNo = shipmentNo;
         this.date = date;
+        this.employee = employee;
         this.items = new ArrayList<>(); 
     }
 
@@ -36,6 +47,15 @@ public class Shipment {
     // Getter for items
     public List<ItemLine> getItems() {
         return items;
+    }
+    
+    public Employee getEmployee() {
+    	return employee;
+    }
+    
+    // Setter for shipmentNo
+    public void setShipmentNo(int shipmentNo) {
+    	this.shipmentNo = shipmentNo;
     }
 
     // Method - Adding Item
