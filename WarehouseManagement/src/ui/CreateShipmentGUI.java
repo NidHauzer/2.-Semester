@@ -7,6 +7,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import controller.EmployeeController;
+import controller.PartyController;
+import controller.ShipmentController;
+import model.Shipment;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -15,19 +18,27 @@ import javax.swing.SwingWorker;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.concurrent.ExecutionException;
 import java.awt.event.ActionEvent;
 
 public class CreateShipmentGUI extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField textFieldEmployee;
+	private JTextField textFieldReceiver;
 	
 	private static JLabel lblReceiver;
 	private static JLabel lblEmployee;
 	
 	private static EmployeeController ec;
+	private static PartyController pc;
+	private static ShipmentController sc;
+	
+	private static int employeeNo;
+	private static String phoneNo;
+	
 
 	/**
 	 * Launch the application.
@@ -58,51 +69,122 @@ public class CreateShipmentGUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		lblEmployee = new JLabel("Employee:");
-		lblEmployee.setBounds(12, 12, 137, 15);
+		lblEmployee.setBounds(12, 12, 237, 15);
 		contentPane.add(lblEmployee);
 		
-		textField = new JTextField();
-		textField.setToolTipText("Employee number");
-		textField.setBounds(12, 31, 151, 19);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		textFieldEmployee = new JTextField();
+		textFieldEmployee.setToolTipText("Employee number");
+		textFieldEmployee.setBounds(12, 31, 151, 19);
+		contentPane.add(textFieldEmployee);
+		textFieldEmployee.setColumns(10);
 		
 		JButton btnFindEmployee = new JButton("Find");
 		btnFindEmployee.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				startFindEmployeeThread(Integer.parseInt(textField.getText()));
+				employeeNo = Integer.parseInt(textFieldEmployee.getText());
+				startFindEmployeeThread(employeeNo);
 			}
 		});
 		btnFindEmployee.setBounds(175, 28, 74, 25);
 		contentPane.add(btnFindEmployee);
 		
 		lblReceiver = new JLabel("Receiver:");
-		lblReceiver.setBounds(12, 62, 55, 15);
+		lblReceiver.setBounds(12, 62, 237, 15);
 		contentPane.add(lblReceiver);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(12, 80, 151, 19);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		textFieldReceiver = new JTextField();
+		textFieldReceiver.setBounds(12, 80, 151, 19);
+		contentPane.add(textFieldReceiver);
+		textFieldReceiver.setColumns(10);
 		
-		JButton btnFindEmployee_1 = new JButton("Find");
-		btnFindEmployee_1.setBounds(175, 77, 74, 25);
-		contentPane.add(btnFindEmployee_1);
+		JButton btnFindReceiver = new JButton("Find");
+		btnFindReceiver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				phoneNo = textFieldReceiver.getText();
+				startFindReceiverThread(phoneNo);
+			}
+		});
+		btnFindReceiver.setBounds(175, 77, 74, 25);
+		contentPane.add(btnFindReceiver);
 		
 		JButton btnCreateShipment = new JButton("Create Shipment");
+		btnCreateShipment.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int shipmentNo = startCreateShipmentThread(employeeNo, phoneNo);
+				JOptionPane.showMessageDialog(new JFrame(), "Shipment created with shipment number " + shipmentNo);
+				CreateShipmentGUI.this.dispose();
+			}
+		});
 		btnCreateShipment.setBounds(119, 144, 130, 25);
 		contentPane.add(btnCreateShipment);
 		
 		JButton btnCancel = new JButton("Cancel");
+		btnCancel.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				contentPane.setVisible(false);
+				CreateShipmentGUI.this.dispose();
+			}
+		});
 		btnCancel.setBounds(12, 144, 74, 25);
 		contentPane.add(btnCancel);
 	}
 	
+	
+	private static int startCreateShipmentThread(int employeeNo, String phoneNo) {
+		sc = new ShipmentController();
+		
+		int i = 0;
+		
+		SwingWorker sw = new SwingWorker() {
+			int shipmentNo = 0;
+			
+			protected Object doInBackground() {
+				try {
+					shipmentNo = sc.createShipment(employeeNo, phoneNo, LocalDate.now()).getShipmentNo();
+				} catch(SQLException e) {
+					JOptionPane.showMessageDialog(new JFrame(), "Error! No shipment was created.");
+				};
+				return shipmentNo;
+			}
+		};
+		sw.execute();
+		try {
+			i = (int)sw.get();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} catch (ExecutionException e) {
+			e.printStackTrace();
+		}
+		return i;
+	}
+	
+	private static void startFindReceiverThread(String phoneNo) {
+		pc = new PartyController();
+		
+		SwingWorker sw = new SwingWorker() {
+			String name = "";
+			
+			protected String doInBackground() {
+				try {
+					name = pc.findPartyByPhoneNo(phoneNo).getName();
+				} catch(SQLException e) {
+					JOptionPane.showMessageDialog(new JFrame(), "No receiver found.");
+				};
+				return name;
+			}
+			
+			protected void done() {
+				if(!isCancelled()) lblReceiver.setText("Receiver: " + name);
+			}
+		};
+		
+		sw.execute();
+	}
 
 	private static void startFindEmployeeThread(int employeeNo) {
 		ec = new EmployeeController();
 		
-		SwingWorker sw1 = new SwingWorker() {
+		SwingWorker sw = new SwingWorker() {
 			protected String doInBackground() {
 				String name = null;
 				try {
@@ -118,6 +200,6 @@ public class CreateShipmentGUI extends JFrame {
 			}
 		};
 		
-		sw1.execute();
+		sw.execute();
 	}
 }

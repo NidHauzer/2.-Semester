@@ -4,6 +4,7 @@ USE WarehouseManagement;
 DROP TABLE IF EXISTS Warehouse, Location, ItemLine, Product, Shipment, Party, Address, ZipCity, Employee
 GO
 
+--Create all tables
 CREATE TABLE Employee (
     name VARCHAR(128) NOT NULL,
     employeeNo int NOT NULL PRIMARY KEY
@@ -65,13 +66,17 @@ CREATE TABLE Warehouse (
 
 --Insert some test data
 INSERT INTO ZipCity VALUES ('9300', 'Sæby');
+INSERT INTO ZipCity VALUES ('4000', 'Roskilde');
 
 INSERT INTO Address VALUES ('Gl. Aalborgvej', 55, '9300', 'Denmark')
+INSERT INTO Address VALUES ('Lagervej', '12', '4000', 'Denmark')
 
-INSERT INTO Party VALUES ('Jonas Vittrup Biegel', '11223344', 1)
+INSERT INTO Party VALUES ('Sæby Lager', '11223344', 1)
+INSERT INTO Party VALUES ('Roskilde Lager', '12345678', 2);
 
 INSERT INTO Product VALUES ('AAA123', '100', '10', 'Light Beige Blonde Mix 16B/60B', 'Tape Extension', '50', '50')
 
 INSERT INTO Location VALUES ('A1', 'AAA123')
 
 INSERT INTO Employee VALUES ('Thea', '1')
+INSERT INTO Employee VALUES('Niels Christian', '2');
