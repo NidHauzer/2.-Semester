@@ -222,18 +222,6 @@ createShipment(employeeNo, phoneNo, date)</panel_attributes>
       <h>52</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-orderNo</panel_attributes>
-    <additional_attributes>10.0;20.0;310.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>338</x>
-      <y>351</y>
-      <w>429</w>
-      <h>52</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
 shipmentNo</panel_attributes>
     <additional_attributes>10.0;20.0;310.0;20.0</additional_attributes>
   </element>
