@@ -1,7 +1,7 @@
 USE WarehouseManagement;
 
 --Remove tables if they exist
-DROP TABLE IF EXISTS Warehouse, Location, ItemLine, Product, SupplyOrder, Shipment, Party, Supplier, Address, ZipCity, Employee
+DROP TABLE IF EXISTS Warehouse, Location, ItemLine, Product, Shipment, Party, Address, ZipCity, Employee
 GO
 
 CREATE TABLE Employee (
@@ -22,12 +22,6 @@ CREATE TABLE Address (
     country VARCHAR(128)
 )
 
-CREATE TABLE Supplier (
-    name VARCHAR(128),
-    cvrNumber VARCHAR(128) NOT NULL PRIMARY KEY,
-    addressId int NOT NULL FOREIGN KEY REFERENCES Address(addressId)
-)
-
 CREATE TABLE Party (
     name VARCHAR(128),
     phoneNo VARCHAR(128) NOT NULL PRIMARY KEY,
@@ -38,13 +32,6 @@ CREATE TABLE Shipment (
     phoneNo VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES Party(phoneNo),
     shipmentNo int NOT NULL IDENTITY(1,1) PRIMARY KEY,
     date DATE NOT NULL,
-    employeeNo int NOT NULL FOREIGN KEY REFERENCES Employee(employeeNo)
-)
-
-CREATE TABLE SupplyOrder (
-    orderNo int NOT NULL IDENTITY(1,1) PRIMARY KEY,
-    date DATE NOT NULL,
-    cvrNumber VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES Supplier(cvrNumber),
     employeeNo int NOT NULL FOREIGN KEY REFERENCES Employee(employeeNo)
 )
 
@@ -60,8 +47,7 @@ CREATE TABLE Product (
 
 CREATE TABLE ItemLine (
     quantity int NOT NULL,
-    shipmentNo int FOREIGN KEY REFERENCES Shipment(shipmentNo),
-    orderNo int FOREIGN KEY REFERENCES SupplyOrder(orderNo),
+    shipmentNo int NOT NULL FOREIGN KEY REFERENCES Shipment(shipmentNo),
     barcode VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES Product(barcode),
     id int NOT NULL IDENTITY(1,1) PRIMARY KEY
 )

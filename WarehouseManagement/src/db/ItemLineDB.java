@@ -22,7 +22,6 @@ public class ItemLineDB implements ItemLineDBIF {
 		PreparedStatement p = con.prepareStatement("INSERT INTO ItemLine VALUES ("
 				+ "?, " //quantity
 				+ "?, " //shipmentNo
-				+ "null, "
 				+ "?)"); //barcode
 		p.setInt(1, quantity);
 		p.setInt(2, shipmentNo);

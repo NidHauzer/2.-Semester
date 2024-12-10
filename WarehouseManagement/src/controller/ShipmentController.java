@@ -34,6 +34,8 @@ public class ShipmentController {
 		productC = new ProductController();
 		ItemLineDB idb = new ItemLineDB();
 		
+		productC.updateStock(productC.findProductByBarcode(barcode), -(quantity));
+		
 		ItemLine il = productC.createItemLine(productC.findProductByBarcode(barcode), quantity);
 	
 		return idb.create(il, shipmentNo);
