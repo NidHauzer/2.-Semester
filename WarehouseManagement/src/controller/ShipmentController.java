@@ -15,6 +15,8 @@ public class ShipmentController {
 	
 	ShipmentDB sdb;
 	
+	Shipment shipment;
+	
 	public Shipment createShipment(int employeeNo, String phoneNo, LocalDate date) throws SQLException {
 		employeeC = new EmployeeController();
 		partyC = new PartyController();
@@ -27,6 +29,16 @@ public class ShipmentController {
 		);
 		
 		return sdb.create(s);
+	}
+	
+	public Shipment getShipment() {
+		return this.shipment;
+	}
+	
+	public Shipment findShipment(int shipmentNo) throws SQLException {
+		sdb = new ShipmentDB();
+		shipment = sdb.findByShipmentNo(shipmentNo);
+		return shipment;
 	}
 	
 	public ItemLine addItemLine(String barcode, int quantity, int shipmentNo) throws SQLException {

@@ -65,9 +65,11 @@ public class ProductDB implements ProductDBIF {
 				throw new SQLException("No product was found.");
 			}
 		}
+
 		PreparedStatement pUpdate = con.prepareStatement("UPDATE Product "
 				+ "SET quantityInStock = ? "
 				+ "WHERE barcode = ?");
+		
 		pUpdate.setInt(1, newStock);
 		pUpdate.setString(2, product.getBarcode());
 		int affectedRows = pUpdate.executeUpdate();

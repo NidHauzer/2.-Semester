@@ -20,6 +20,9 @@ public class MainGUI extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	
+	private CreateShipmentGUI createShipmentGUI;
+	private AddProductGUI addProductGUI;
 
 	/**
 	 * Launch the application.
@@ -50,12 +53,20 @@ public class MainGUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnCreateShipment = new JButton("Create Shipment");
+		btnCreateShipment.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				createShipmentGUI = new CreateShipmentGUI();
+				createShipmentGUI.setVisible(true);
+			}
+		});
 		btnCreateShipment.setBounds(117, 100, 205, 37);
 		contentPane.add(btnCreateShipment);
 		
 		JButton btnAddProduct = new JButton("Add Product To Shipment");
 		btnAddProduct.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				addProductGUI = new AddProductGUI();
+				addProductGUI.setVisible(true);
 			}
 		});
 		btnAddProduct.setBounds(117, 149, 205, 37);

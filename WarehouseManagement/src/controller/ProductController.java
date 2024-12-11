@@ -9,11 +9,17 @@ import model.Product;
 
 public class ProductController {
 	
+	Product p;
 	ProductDB pdb;
 	
 	public Product findProductByBarcode(String barcode) throws SQLException {
 		pdb = new ProductDB();
-		return pdb.findByBarcode(barcode);
+		this.p = pdb.findByBarcode(barcode);
+		return p;
+	}
+	
+	public Product getProduct() {
+		return this.p;	
 	}
 	
 	public ItemLine createItemLine(Product p, int quantity) {

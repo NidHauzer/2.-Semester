@@ -9,8 +9,6 @@ import javax.swing.border.EmptyBorder;
 import controller.EmployeeController;
 import controller.PartyController;
 import controller.ShipmentController;
-import model.Shipment;
-
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -61,7 +59,7 @@ public class CreateShipmentGUI extends JFrame {
 	 */
 	public CreateShipmentGUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 274, 208);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -110,9 +108,7 @@ public class CreateShipmentGUI extends JFrame {
 		JButton btnCreateShipment = new JButton("Create Shipment");
 		btnCreateShipment.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int shipmentNo = startCreateShipmentThread(employeeNo, phoneNo);
-				JOptionPane.showMessageDialog(new JFrame(), "Shipment created with shipment number " + shipmentNo);
-				CreateShipmentGUI.this.dispose();
+				startCreateShipmentThread(employeeNo, phoneNo);
 			}
 		});
 		btnCreateShipment.setBounds(119, 144, 130, 25);
@@ -130,32 +126,25 @@ public class CreateShipmentGUI extends JFrame {
 	}
 	
 	
-	private static int startCreateShipmentThread(int employeeNo, String phoneNo) {
+	private static boolean startCreateShipmentThread(int employeeNo, String phoneNo) {
 		sc = new ShipmentController();
-		
-		int i = 0;
 		
 		SwingWorker sw = new SwingWorker() {
 			int shipmentNo = 0;
 			
-			protected Object doInBackground() {
+			protected Integer doInBackground() {
 				try {
 					shipmentNo = sc.createShipment(employeeNo, phoneNo, LocalDate.now()).getShipmentNo();
+					JOptionPane.showMessageDialog(new JFrame(), "Shipment created with shipment number " + shipmentNo);
 				} catch(SQLException e) {
 					JOptionPane.showMessageDialog(new JFrame(), "Error! No shipment was created.");
+					cancel(true);
 				};
 				return shipmentNo;
 			}
 		};
 		sw.execute();
-		try {
-			i = (int)sw.get();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		} catch (ExecutionException e) {
-			e.printStackTrace();
-		}
-		return i;
+		return(sw.isCancelled());
 	}
 	
 	private static void startFindReceiverThread(String phoneNo) {
@@ -169,6 +158,7 @@ public class CreateShipmentGUI extends JFrame {
 					name = pc.findPartyByPhoneNo(phoneNo).getName();
 				} catch(SQLException e) {
 					JOptionPane.showMessageDialog(new JFrame(), "No receiver found.");
+					cancel(true);
 				};
 				return name;
 			}
@@ -186,7 +176,7 @@ public class CreateShipmentGUI extends JFrame {
 		
 		SwingWorker sw = new SwingWorker() {
 			protected String doInBackground() {
-				String name = null;
+				String name = "";
 				try {
 					name = ec.findEmployeeByEmployeeNo(employeeNo).getName();
 				} catch(SQLException e) {
