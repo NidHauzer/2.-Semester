@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>370</x>
+      <x>340</x>
       <y>0</y>
       <w>1230</w>
       <h>720</h>
@@ -15,7 +15,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>530</x>
+      <x>500</x>
       <y>190</y>
       <w>1030</w>
       <h>460</h>
@@ -26,7 +26,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>390</x>
+      <x>360</x>
       <y>20</y>
       <w>120</w>
       <h>680</h>
@@ -37,7 +37,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>530</x>
+      <x>500</x>
       <y>190</y>
       <w>100</w>
       <h>460</h>
@@ -48,7 +48,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>570</x>
+      <x>540</x>
       <y>230</y>
       <w>20</w>
       <h>20</h>
@@ -59,7 +59,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>570</x>
+      <x>540</x>
       <y>270</y>
       <w>20</w>
       <h>20</h>
@@ -70,7 +70,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
+      <x>530</x>
       <y>220</y>
       <w>50</w>
       <h>50</h>
@@ -81,7 +81,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>530</x>
+      <x>500</x>
       <y>220</y>
       <w>1030</w>
       <h>40</h>
@@ -92,7 +92,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>530</x>
+      <x>500</x>
       <y>260</y>
       <w>1030</w>
       <h>40</h>
@@ -103,7 +103,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>530</x>
+      <x>500</x>
       <y>300</y>
       <w>1030</w>
       <h>40</h>
@@ -114,7 +114,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>570</x>
+      <x>540</x>
       <y>310</y>
       <w>20</w>
       <h>20</h>
@@ -125,7 +125,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>540</x>
+      <x>510</x>
       <y>90</y>
       <w>250</w>
       <h>50</h>
@@ -138,7 +138,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>800</x>
+      <x>770</x>
       <y>100</y>
       <w>90</w>
       <h>30</h>
@@ -149,7 +149,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1480</x>
+      <x>1450</x>
       <y>20</y>
       <w>100</w>
       <h>30</h>
@@ -160,7 +160,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
+      <x>370</x>
       <y>30</y>
       <w>100</w>
       <h>30</h>
@@ -171,7 +171,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
+      <x>370</x>
       <y>100</y>
       <w>100</w>
       <h>30</h>
@@ -182,7 +182,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
+      <x>370</x>
       <y>140</y>
       <w>100</w>
       <h>30</h>
@@ -193,7 +193,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
+      <x>370</x>
       <y>180</y>
       <w>100</w>
       <h>30</h>
@@ -204,7 +204,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
+      <x>370</x>
       <y>220</y>
       <w>100</w>
       <h>30</h>
@@ -215,7 +215,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
+      <x>370</x>
       <y>260</y>
       <w>100</w>
       <h>30</h>
@@ -226,7 +226,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>900</x>
+      <x>870</x>
       <y>100</y>
       <w>90</w>
       <h>30</h>
@@ -237,7 +237,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1460</x>
+      <x>1430</x>
       <y>670</y>
       <w>100</w>
       <h>30</h>
@@ -248,7 +248,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1350</x>
+      <x>1320</x>
       <y>670</y>
       <w>100</w>
       <h>30</h>
@@ -259,7 +259,7 @@ Search field
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
+      <x>530</x>
       <y>220</y>
       <w>50</w>
       <h>50</h>
@@ -270,7 +270,7 @@ Search field
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
+      <x>530</x>
       <y>300</y>
       <w>50</w>
       <h>50</h>
@@ -281,7 +281,7 @@ Search field
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
+      <x>530</x>
       <y>300</y>
       <w>50</w>
       <h>50</h>
@@ -292,7 +292,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>200</x>
+      <x>170</x>
       <y>830</y>
       <w>1230</w>
       <h>720</h>
@@ -303,7 +303,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>370</x>
+      <x>340</x>
       <y>960</y>
       <w>1030</w>
       <h>150</h>
@@ -314,7 +314,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>230</x>
+      <x>200</x>
       <y>850</y>
       <w>120</w>
       <h>680</h>
@@ -325,7 +325,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>370</x>
+      <x>340</x>
       <y>960</y>
       <w>100</w>
       <h>150</h>
@@ -336,7 +336,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>410</x>
+      <x>380</x>
       <y>1000</y>
       <w>20</w>
       <h>20</h>
@@ -347,7 +347,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>410</x>
+      <x>380</x>
       <y>1040</y>
       <w>20</w>
       <h>20</h>
@@ -358,7 +358,7 @@ Search field
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
+      <x>370</x>
       <y>990</y>
       <w>50</w>
       <h>50</h>
@@ -369,7 +369,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>370</x>
+      <x>340</x>
       <y>990</y>
       <w>1030</w>
       <h>40</h>
@@ -380,7 +380,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>370</x>
+      <x>340</x>
       <y>1030</y>
       <w>1030</w>
       <h>40</h>
@@ -391,7 +391,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>370</x>
+      <x>340</x>
       <y>920</y>
       <w>250</w>
       <h>30</h>
@@ -402,7 +402,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>660</x>
+      <x>630</x>
       <y>1170</y>
       <w>90</w>
       <h>30</h>
@@ -413,7 +413,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1320</x>
+      <x>1290</x>
       <y>850</y>
       <w>100</w>
       <h>30</h>
@@ -424,7 +424,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
+      <x>210</x>
       <y>860</y>
       <w>100</w>
       <h>30</h>
@@ -435,7 +435,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
+      <x>210</x>
       <y>930</y>
       <w>100</w>
       <h>30</h>
@@ -446,7 +446,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
+      <x>210</x>
       <y>970</y>
       <w>100</w>
       <h>30</h>
@@ -457,7 +457,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
+      <x>210</x>
       <y>1010</y>
       <w>100</w>
       <h>30</h>
@@ -468,7 +468,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
+      <x>210</x>
       <y>1050</y>
       <w>100</w>
       <h>30</h>
@@ -479,7 +479,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
+      <x>210</x>
       <y>1090</y>
       <w>100</w>
       <h>30</h>
@@ -490,7 +490,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>760</x>
+      <x>730</x>
       <y>1170</y>
       <w>90</w>
       <h>30</h>
@@ -501,7 +501,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1300</x>
+      <x>1270</x>
       <y>1500</y>
       <w>100</w>
       <h>30</h>
@@ -512,7 +512,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1240</x>
+      <x>1210</x>
       <y>670</y>
       <w>100</w>
       <h>30</h>
@@ -523,7 +523,7 @@ Search field
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
+      <x>370</x>
       <y>990</y>
       <w>50</w>
       <h>50</h>
@@ -534,7 +534,7 @@ Search field
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
+      <x>370</x>
       <y>1030</y>
       <w>50</w>
       <h>50</h>
@@ -545,7 +545,7 @@ Search field
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
+      <x>370</x>
       <y>1030</y>
       <w>50</w>
       <h>50</h>
@@ -556,7 +556,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>380</x>
+      <x>350</x>
       <y>1160</y>
       <w>250</w>
       <h>50</h>
@@ -569,7 +569,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>370</x>
+      <x>340</x>
       <y>1240</y>
       <w>1030</w>
       <h>190</h>
@@ -580,7 +580,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>370</x>
+      <x>340</x>
       <y>1240</y>
       <w>100</w>
       <h>190</h>
@@ -591,7 +591,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>410</x>
+      <x>380</x>
       <y>1280</y>
       <w>20</w>
       <h>20</h>
@@ -602,7 +602,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>410</x>
+      <x>380</x>
       <y>1320</y>
       <w>20</w>
       <h>20</h>
@@ -613,7 +613,7 @@ Search field
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
+      <x>370</x>
       <y>1350</y>
       <w>50</w>
       <h>50</h>
@@ -624,7 +624,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>410</x>
+      <x>380</x>
       <y>1360</y>
       <w>20</w>
       <h>20</h>
@@ -635,7 +635,7 @@ Search field
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
+      <x>370</x>
       <y>1350</y>
       <w>50</w>
       <h>50</h>
@@ -646,7 +646,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
+      <x>440</x>
       <y>1240</y>
       <w>100</w>
       <h>30</h>
@@ -657,7 +657,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>570</x>
+      <x>540</x>
       <y>1240</y>
       <w>220</w>
       <h>30</h>
@@ -668,7 +668,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>790</x>
+      <x>760</x>
       <y>1240</y>
       <w>220</w>
       <h>30</h>
@@ -679,7 +679,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
+      <x>440</x>
       <y>1270</y>
       <w>100</w>
       <h>40</h>
@@ -690,7 +690,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>570</x>
+      <x>540</x>
       <y>1270</y>
       <w>220</w>
       <h>40</h>
@@ -701,7 +701,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>790</x>
+      <x>760</x>
       <y>1270</y>
       <w>220</w>
       <h>40</h>
@@ -712,7 +712,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>370</x>
+      <x>340</x>
       <y>1270</y>
       <w>100</w>
       <h>40</h>
@@ -723,7 +723,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>370</x>
+      <x>340</x>
       <y>1310</y>
       <w>100</w>
       <h>40</h>
@@ -734,7 +734,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
+      <x>440</x>
       <y>1310</y>
       <w>100</w>
       <h>40</h>
@@ -745,7 +745,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>570</x>
+      <x>540</x>
       <y>1310</y>
       <w>220</w>
       <h>40</h>
@@ -756,7 +756,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>790</x>
+      <x>760</x>
       <y>1310</y>
       <w>220</w>
       <h>40</h>
@@ -767,7 +767,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>790</x>
+      <x>760</x>
       <y>1350</y>
       <w>220</w>
       <h>40</h>
@@ -778,7 +778,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>570</x>
+      <x>540</x>
       <y>1350</y>
       <w>220</w>
       <h>40</h>
@@ -789,7 +789,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
+      <x>440</x>
       <y>1350</y>
       <w>100</w>
       <h>40</h>
@@ -800,7 +800,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>370</x>
+      <x>340</x>
       <y>1350</y>
       <w>100</w>
       <h>40</h>
@@ -811,7 +811,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>570</x>
+      <x>540</x>
       <y>1390</y>
       <w>220</w>
       <h>40</h>
@@ -822,7 +822,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>790</x>
+      <x>760</x>
       <y>1390</y>
       <w>220</w>
       <h>40</h>
@@ -833,7 +833,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
+      <x>440</x>
       <y>1390</y>
       <w>100</w>
       <h>40</h>
@@ -844,7 +844,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>370</x>
+      <x>340</x>
       <y>1390</y>
       <w>100</w>
       <h>40</h>
@@ -855,7 +855,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>410</x>
+      <x>380</x>
       <y>1400</y>
       <w>20</w>
       <h>20</h>
@@ -866,7 +866,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1010</x>
+      <x>980</x>
       <y>1240</y>
       <w>390</w>
       <h>30</h>
@@ -877,7 +877,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1010</x>
+      <x>980</x>
       <y>1270</y>
       <w>390</w>
       <h>40</h>
@@ -888,7 +888,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1010</x>
+      <x>980</x>
       <y>1310</y>
       <w>390</w>
       <h>40</h>
@@ -899,7 +899,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1010</x>
+      <x>980</x>
       <y>1350</y>
       <w>390</w>
       <h>40</h>
@@ -910,7 +910,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1010</x>
+      <x>980</x>
       <y>1390</y>
       <w>390</w>
       <h>40</h>
@@ -921,7 +921,7 @@ Search field
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1180</x>
+      <x>1150</x>
       <y>1500</y>
       <w>100</w>
       <h>30</h>
