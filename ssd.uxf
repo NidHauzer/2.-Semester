@@ -28,8 +28,8 @@ fontsize=10
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>260</x>
-      <y>0</y>
+      <x>299</x>
+      <y>78</y>
       <w>130</w>
       <h>130</h>
     </coordinates>
@@ -39,8 +39,8 @@ fontsize=10
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>650</x>
-      <y>78</y>
+      <x>689</x>
+      <y>156</y>
       <w>130</w>
       <h>39</h>
     </coordinates>
@@ -50,30 +50,30 @@ fontsize=10
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>117</y>
+      <x>351</x>
+      <y>195</y>
       <w>39</w>
-      <h>598</h>
+      <h>624</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;440.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;460.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>702</x>
-      <y>104</y>
+      <x>741</x>
+      <y>182</y>
       <w>39</w>
-      <h>611</h>
+      <h>637</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;450.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;470.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>208</y>
+      <x>351</x>
+      <y>299</y>
       <w>429</w>
       <h>52</h>
     </coordinates>
@@ -84,8 +84,8 @@ findReceiver(phoneNo)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>390</y>
+      <x>351</x>
+      <y>494</y>
       <w>429</w>
       <h>52</h>
     </coordinates>
@@ -96,8 +96,8 @@ addLineItem(barcode, quantity, shipmentNo)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>442</y>
+      <x>351</x>
+      <y>533</y>
       <w>429</w>
       <h>52</h>
     </coordinates>
@@ -108,8 +108,8 @@ type, colour, quantity</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>507</y>
+      <x>351</x>
+      <y>598</y>
       <w>429</w>
       <h>52</h>
     </coordinates>
@@ -121,8 +121,8 @@ addReceiver(streetName, houseNo, zip, city, country)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>585</y>
+      <x>351</x>
+      <y>689</y>
       <w>429</w>
       <h>52</h>
     </coordinates>
@@ -133,8 +133,8 @@ createConfirmation(orderNo)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>546</y>
+      <x>351</x>
+      <y>637</y>
       <w>429</w>
       <h>52</h>
     </coordinates>
@@ -145,8 +145,8 @@ streetName, houseNo, zip, city, country</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>624</y>
+      <x>351</x>
+      <y>728</y>
       <w>429</w>
       <h>52</h>
     </coordinates>
@@ -157,10 +157,10 @@ confirmation</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>273</x>
-      <y>377</y>
+      <x>312</x>
+      <y>481</y>
       <w>494</w>
-      <h>117</h>
+      <h>104</h>
     </coordinates>
     <panel_attributes>loop</panel_attributes>
     <additional_attributes/>
@@ -168,8 +168,8 @@ confirmation</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>130</y>
+      <x>351</x>
+      <y>208</y>
       <w>429</w>
       <h>52</h>
     </coordinates>
@@ -180,8 +180,8 @@ findEmployee(employeeNo)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>169</y>
+      <x>351</x>
+      <y>247</y>
       <w>429</w>
       <h>52</h>
     </coordinates>
@@ -192,8 +192,8 @@ employeeName, employeeNo</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>247</y>
+      <x>351</x>
+      <y>338</y>
       <w>429</w>
       <h>52</h>
     </coordinates>
@@ -204,8 +204,8 @@ receiverName, address, phoneNo</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>286</y>
+      <x>351</x>
+      <y>390</y>
       <w>429</w>
       <h>52</h>
     </coordinates>
@@ -216,8 +216,8 @@ createShipment(employeeNo, phoneNo, date)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>325</y>
+      <x>351</x>
+      <y>429</y>
       <w>429</w>
       <h>52</h>
     </coordinates>
