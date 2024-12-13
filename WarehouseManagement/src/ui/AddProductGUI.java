@@ -1,6 +1,7 @@
 package ui;
 
 import java.awt.EventQueue;
+import java.awt.HeadlessException;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -9,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 import controller.PartyController;
 import controller.ProductController;
 import controller.ShipmentController;
+import exception.NotEnoughStockException;
 
 import java.awt.Window.Type;
 import javax.swing.JLabel;
@@ -139,7 +141,7 @@ public class AddProductGUI extends JFrame {
 		contentPane.add(btnCancel);
 	}
 	
-	private static ShipmentController startFindShipmentThread(int shipmentNo) {
+	private static void startFindShipmentThread(int shipmentNo) {
 		sc = new ShipmentController();
 		
 		SwingWorker sw = new SwingWorker() {
@@ -149,7 +151,7 @@ public class AddProductGUI extends JFrame {
 				} catch (SQLException e) {
 					JOptionPane.showMessageDialog(new JFrame(), "No shipment was found with shipment number " + shipmentNo);
 				}
-				return sc;
+				return true;
 			}
 			
 			protected void done() {
@@ -157,30 +159,40 @@ public class AddProductGUI extends JFrame {
 			}
 		};
 		sw.execute();
-		return sc;
+
 	}
 	
-	private static Object startAddProductToShipmentThread(String barcode, int quantity, int shipmentNo) {
+	private static void startAddProductToShipmentThread(String barcode, int quantity, int shipmentNo) {
 		sc = new ShipmentController();
 		
 		SwingWorker sw = new SwingWorker() {
+			boolean success = false;
+			
 			protected Object doInBackground() {
-				if(pc.getProduct().getQuantityInStock() < quantity) {
-					JOptionPane.showMessageDialog(new JFrame(), "Not enough stock (" + pc.getProduct().getQuantityInStock() + ")");
+				try {
+					sc.addItemLine(barcode, quantity, shipmentNo);
+				} 
+				
+				catch (IllegalArgumentException iae) {
+					JOptionPane.showMessageDialog(new JFrame(), "Quantity cannot be less than 1.");
 					cancel(true);
 				}
 				
-				if(!isCancelled()) {
+				catch (SQLException e) {
+					JOptionPane.showMessageDialog(new JFrame(), "No product was found with barcode " + barcode);
+					cancel(true);
+				
+				}			
+				catch (NotEnoughStockException nese) {
 					try {
-						sc.addItemLine(barcode, quantity, shipmentNo);
+						JOptionPane.showMessageDialog(new JFrame(), "Not enough stock (" + pc.findProductByBarcode(barcode).getQuantityInStock() + ")");
+					} catch (SQLException e) {
+						e.printStackTrace();
 					}
-					catch (SQLException e) {
-						JOptionPane.showMessageDialog(new JFrame(), "No product was found with barcode " + barcode);
-						cancel(true);
-					}
+					cancel(true);
 				}
 				
-				return pc;
+				return true;
 			}
 			
 			protected void done() {
@@ -188,7 +200,6 @@ public class AddProductGUI extends JFrame {
 			}
 		};
 		sw.execute();
-		return pc;
 	}
 	
 	private static Object startFindProductThread(String barcode, String quantity) {
@@ -201,10 +212,6 @@ public class AddProductGUI extends JFrame {
 				} catch (NumberFormatException e) {
 					JOptionPane.showMessageDialog(new JFrame(), "Invalid quantity '" + quantity + "'");
 					cancel(true);
-				}
-				
-				if(Integer.parseInt(quantity) <= 0) {
-					JOptionPane.showMessageDialog(new JFrame(), "Quantity cannot be less than or equal to 0.");
 				}
 				
 				try {

@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import exception.NotEnoughStockException;
 import model.Product;
 
 public class ProductDB implements ProductDBIF {
@@ -51,7 +52,7 @@ public class ProductDB implements ProductDBIF {
 		return product;
 	}
 	
-	public Product updateStock(Product product, int quantity) throws SQLException {
+	public Product updateStock(Product product, int quantity) throws SQLException, NotEnoughStockException {
 		Product newProduct = product;
 		int newStock;
 		Connection con = dbc.getConnection();
@@ -65,17 +66,22 @@ public class ProductDB implements ProductDBIF {
 				throw new SQLException("No product was found.");
 			}
 		}
-
-		PreparedStatement pUpdate = con.prepareStatement("UPDATE Product "
+		
+		if(newStock < 0) throw new NotEnoughStockException("Stock can not go under 0");
+		else {
+			PreparedStatement pUpdate = con.prepareStatement("UPDATE Product "
 				+ "SET quantityInStock = ? "
 				+ "WHERE barcode = ?");
 		
-		pUpdate.setInt(1, newStock);
-		pUpdate.setString(2, product.getBarcode());
-		int affectedRows = pUpdate.executeUpdate();
-		if(affectedRows == 0) throw new SQLException("No update was made.");
-		newProduct.setQuantityInStock(newStock);
-		return newProduct;
+			pUpdate.setInt(1, newStock);
+			pUpdate.setString(2, product.getBarcode());
+			int affectedRows = pUpdate.executeUpdate();
+			if(affectedRows == 0) throw new SQLException("No update was made.");
+			newProduct.setQuantityInStock(newStock);
+			return newProduct;
+		}
+		
+		
 	}
 	
 	// Builds an object from ResultSet and returns it

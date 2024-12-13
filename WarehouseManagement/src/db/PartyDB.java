@@ -29,6 +29,7 @@ public class PartyDB implements PartyDBIF {
 		PreparedStatement p = con.prepareStatement("SELECT * FROM Party "
 				+ "JOIN Address ON Party.addressId = Address.addressId "
 				+ "JOIN ZipCity on Address.zip = ZipCity.zip "
+				+ "JOIN Country on ZipCity.countryID = Country.countryID "
 				+ "WHERE phoneNo = ?");
 		p.setString(1, phoneNo);
 		

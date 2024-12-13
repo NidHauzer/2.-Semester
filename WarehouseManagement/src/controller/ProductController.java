@@ -4,6 +4,7 @@ import java.sql.SQLException;
 
 import db.ItemLineDB;
 import db.ProductDB;
+import exception.NotEnoughStockException;
 import model.ItemLine;
 import model.Product;
 
@@ -26,7 +27,7 @@ public class ProductController {
 		return new ItemLine(quantity, p);
 	}
 	
-	public Product updateStock(Product p, int quantity) throws SQLException {
+	public Product updateStock(Product p, int quantity) throws SQLException, NotEnoughStockException {
 		pdb = new ProductDB();
 		return pdb.updateStock(p, quantity);
 	}

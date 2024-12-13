@@ -126,7 +126,7 @@ public class CreateShipmentGUI extends JFrame {
 	}
 	
 	
-	private static boolean startCreateShipmentThread(int employeeNo, String phoneNo) {
+	private static void startCreateShipmentThread(int employeeNo, String phoneNo) {
 		sc = new ShipmentController();
 		
 		SwingWorker sw = new SwingWorker() {
@@ -144,7 +144,6 @@ public class CreateShipmentGUI extends JFrame {
 			}
 		};
 		sw.execute();
-		return(sw.isCancelled());
 	}
 	
 	private static void startFindReceiverThread(String phoneNo) {
@@ -175,18 +174,21 @@ public class CreateShipmentGUI extends JFrame {
 		ec = new EmployeeController();
 		
 		SwingWorker sw = new SwingWorker() {
+			String name = "";
+			
 			protected String doInBackground() {
-				String name = "";
+
 				try {
 					name = ec.findEmployeeByEmployeeNo(employeeNo).getName();
 				} catch(SQLException e) {
 					JOptionPane.showMessageDialog(new JFrame(), "No employee found.");
+					cancel(true);
 				};
 				return name;
 			}
 			
 			protected void done() {
-				lblEmployee.setText("Employee: " + doInBackground());
+				if(!isCancelled()) lblEmployee.setText("Employee: " + name);
 			}
 		};
 		

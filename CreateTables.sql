@@ -1,7 +1,7 @@
 USE WarehouseManagement;
 
 --Remove tables if they exist
-DROP TABLE IF EXISTS Warehouse, Location, ItemLine, Product, Shipment, Party, Address, ZipCity, Employee
+DROP TABLE IF EXISTS Warehouse, Location, ItemLine, Product, Shipment, Party, Address, ZipCity, Country, Employee;
 GO
 
 --Create all tables
@@ -10,17 +10,22 @@ CREATE TABLE Employee (
     employeeNo int NOT NULL PRIMARY KEY
 );
 
+CREATE TABLE Country (
+    countryID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+    country VARCHAR(128) NOT NULL
+)
+
 CREATE TABLE ZipCity (
     zip VARCHAR(128) NOT NULL PRIMARY KEY,
-    city VARCHAR(128)
+    city VARCHAR(128) NOT NULL,
+    countryID int NOT NULL FOREIGN KEY REFERENCES Country(countryID)
 )
 
 CREATE TABLE Address (
-    addressId int NOT NULL PRIMARY KEY IDENTITY(1,1),
     streetName VARCHAR(128) NOT NULL,
     houseNo int NOT NULL,
-    zip VARCHAR(128) FOREIGN KEY REFERENCES ZipCity(zip),
-    country VARCHAR(128)
+    zip VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES ZipCity(zip),
+    addressId int NOT NULL PRIMARY KEY IDENTITY(1,1)
 )
 
 CREATE TABLE Party (
@@ -65,18 +70,18 @@ CREATE TABLE Warehouse (
 )
 
 --Insert some test data
-INSERT INTO ZipCity VALUES ('9300', 'Sæby');
-INSERT INTO ZipCity VALUES ('4000', 'Roskilde');
+INSERT INTO Country VALUES ('Denmark');
 
-INSERT INTO Address VALUES ('Gl. Aalborgvej', 55, '9300', 'Denmark')
-INSERT INTO Address VALUES ('Lagervej', '12', '4000', 'Denmark')
+INSERT INTO ZipCity VALUES ('9300', 'Sæby', '1');
+INSERT INTO ZipCity VALUES ('4000', 'Roskilde', '1');
+
+INSERT INTO Address VALUES ('Gl. Aalborgvej', 55, '9300')
+INSERT INTO Address VALUES ('Lagervej', '12', '4000')
 
 INSERT INTO Party VALUES ('Sæby Lager', '11223344', 1)
 INSERT INTO Party VALUES ('Roskilde Lager', '12345678', 2);
 
 INSERT INTO Product VALUES ('AAA123', '100', '10', 'Light Beige Blonde Mix 16B/60B', 'Tape Extension', '50', '50')
-
-INSERT INTO Location VALUES ('A1', 'AAA123')
 
 INSERT INTO Employee VALUES ('Thea', '1')
 INSERT INTO Employee VALUES('Niels Christian', '2');

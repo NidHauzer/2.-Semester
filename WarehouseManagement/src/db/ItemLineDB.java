@@ -18,6 +18,8 @@ public class ItemLineDB implements ItemLineDBIF {
 		String barcode = itemLine.getProduct().getBarcode();
 		int quantity = itemLine.getQuantity();
 		
+		if(itemLine.getQuantity() <= 0) throw new IllegalArgumentException("Quantity cannot be less than 0");
+		
 		Connection con = dbc.getConnection();
 		PreparedStatement p = con.prepareStatement("INSERT INTO ItemLine VALUES ("
 				+ "?, " //quantity

@@ -85,6 +85,7 @@ public class ShipmentDB implements ShipmentDBIF {
 				+ "JOIN Party ON Shipment.phoneNo = Party.phoneNo "
 				+ "JOIN Address ON Party.addressId = Address.addressId "
 				+ "JOIN ZipCity ON Address.zip = ZipCity.zip "
+				+ "JOIN Country ON ZipCity.countryID = Country.countryID "
 				+ "WHERE shipmentNo = ?");
 		p.setInt(1, shipmentNo);
 		
