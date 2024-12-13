@@ -14,6 +14,9 @@ public class Address {
 		this.city = city;
 		this.country = country;
 	}
+
+
+	//Vi skal have ændret. Fjern country. Vi skal have en zipCountry: zip, country. 
 	
 	public String getStreetName() {
 		return streetName;

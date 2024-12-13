@@ -1,15 +1,20 @@
 USE WarehouseManagement;
 
 --Remove tables if they exist
+<<<<<<< HEAD
 DROP TABLE IF EXISTS Warehouse, Location, ItemLine, Product, Shipment, Party, Address, ZipCity, Country, Employee;
+=======
+DROP TABLE IF EXISTS Warehouse, Location, ItemLine, Product, Shipment, Party, Address, ZipCity, Employee, ZipCountry;
+>>>>>>> 65d495be8f8e8bdb9b4748d2b757e0fcf4d35ed2
 GO
 
 --Create all tables
 CREATE TABLE Employee (
     name VARCHAR(128) NOT NULL,
-    employeeNo int NOT NULL PRIMARY KEY
+    employeeNo INT NOT NULL PRIMARY KEY
 );
 
+<<<<<<< HEAD
 CREATE TABLE Country (
     countryID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
     country VARCHAR(128) NOT NULL
@@ -27,49 +32,63 @@ CREATE TABLE Address (
     zip VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES ZipCity(zip),
     addressId int NOT NULL PRIMARY KEY IDENTITY(1,1)
 )
+=======
+CREATE TABLE ZipCountry (
+    zip VARCHAR(128) NOT NULL PRIMARY KEY,
+    country VARCHAR(128) NOT NULL
+);
+
+CREATE TABLE Address (
+    addressId INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+    streetName VARCHAR(128) NOT NULL,
+    houseNo INT NOT NULL,
+    zip VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES ZipCountry(zip)
+);
+>>>>>>> 65d495be8f8e8bdb9b4748d2b757e0fcf4d35ed2
 
 CREATE TABLE Party (
     name VARCHAR(128),
     phoneNo VARCHAR(128) NOT NULL PRIMARY KEY,
-    addressId int NOT NULL FOREIGN KEY REFERENCES Address(addressId)
-)
+    addressId INT NOT NULL FOREIGN KEY REFERENCES Address(addressId)
+);
 
 CREATE TABLE Shipment (
     phoneNo VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES Party(phoneNo),
-    shipmentNo int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    shipmentNo INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
     date DATE NOT NULL,
-    employeeNo int NOT NULL FOREIGN KEY REFERENCES Employee(employeeNo)
-)
+    employeeNo INT NOT NULL FOREIGN KEY REFERENCES Employee(employeeNo)
+);
 
 CREATE TABLE Product (
     barcode VARCHAR(128) NOT NULL PRIMARY KEY,
-    quantityInStock int NOT NULL,
-    minStock int NOT NULL,
+    quantityInStock INT NOT NULL,
+    minStock INT NOT NULL,
     colour VARCHAR(128) NOT NULL,
     type VARCHAR(128) NOT NULL,
-    length int NOT NULL,
-    amount int NOT NULL
-)
+    length INT NOT NULL,
+    amount INT NOT NULL
+);
 
 CREATE TABLE ItemLine (
-    quantity int NOT NULL,
-    shipmentNo int NOT NULL FOREIGN KEY REFERENCES Shipment(shipmentNo),
+    quantity INT NOT NULL,
+    shipmentNo INT NOT NULL FOREIGN KEY REFERENCES Shipment(shipmentNo),
     barcode VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES Product(barcode),
-    id int NOT NULL IDENTITY(1,1) PRIMARY KEY
-)
+    id INT NOT NULL IDENTITY(1,1) PRIMARY KEY
+);
 
 CREATE TABLE Location (
     locationCode VARCHAR(128) NOT NULL PRIMARY KEY,
-    barcode VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES Product(barcode),
-)
+    barcode VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES Product(barcode)
+);
 
 CREATE TABLE Warehouse (
-    addressId int NOT NULL FOREIGN KEY REFERENCES Address(addressId),
-    warehouseId varchar(128) NOT NULL PRIMARY KEY,
-    locationCode varchar(128) NOT NULL FOREIGN KEY REFERENCES Location(locationCode)
-)
+    addressId INT NOT NULL FOREIGN KEY REFERENCES Address(addressId),
+    warehouseId VARCHAR(128) NOT NULL PRIMARY KEY,
+    locationCode VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES Location(locationCode)
+);
 
 --Insert some test data
+<<<<<<< HEAD
 INSERT INTO Country VALUES ('Denmark');
 
 INSERT INTO ZipCity VALUES ('9300', 'Sæby', '1');
@@ -85,3 +104,10 @@ INSERT INTO Product VALUES ('AAA123', '100', '10', 'Light Beige Blonde Mix 16B/6
 
 INSERT INTO Employee VALUES ('Thea', '1')
 INSERT INTO Employee VALUES('Niels Christian', '2');
+=======
+INSERT INTO ZipCountry VALUES ('9300', 'Denmark');
+INSERT INTO ZipCountry VALUES ('4000', 'Denmark');
+
+INSERT INTO Address (streetName, houseNo, zip) VALUES ('Gl. Aalborgvej', 55, '9300');
+INSERT INTO Address (streetName, houseNo, zip) VALUES ('Lagervej', 12, '4000');
+>>>>>>> 65d495be8f8e8bdb9b4748d2b757e0fcf4d35ed2
