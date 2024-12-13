@@ -79,8 +79,12 @@ public class CreateShipmentGUI extends JFrame {
 		JButton btnFindEmployee = new JButton("Find");
 		btnFindEmployee.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				employeeNo = Integer.parseInt(textFieldEmployee.getText());
-				startFindEmployeeThread(employeeNo);
+				try {
+					employeeNo = Integer.parseInt(textFieldEmployee.getText());
+					startFindEmployeeThread(employeeNo);
+				} catch (NumberFormatException nfe) {
+					JOptionPane.showMessageDialog(new JFrame(), "Not a valid employee number.");
+				}
 			}
 		});
 		btnFindEmployee.setBounds(175, 28, 74, 25);
@@ -135,12 +139,15 @@ public class CreateShipmentGUI extends JFrame {
 			protected Integer doInBackground() {
 				try {
 					shipmentNo = sc.createShipment(employeeNo, phoneNo, LocalDate.now()).getShipmentNo();
-					JOptionPane.showMessageDialog(new JFrame(), "Shipment created with shipment number " + shipmentNo);
 				} catch(SQLException e) {
 					JOptionPane.showMessageDialog(new JFrame(), "Error! No shipment was created.");
 					cancel(true);
 				};
 				return shipmentNo;
+			}
+			
+			protected void done() {
+				JOptionPane.showMessageDialog(new JFrame(), "Shipment created with shipment number " + shipmentNo);
 			}
 		};
 		sw.execute();
