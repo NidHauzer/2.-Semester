@@ -86,7 +86,6 @@ public class AddProductGUI extends JFrame {
 		btnProduct.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				barcode = textFieldProduct.getText();
-				quantity = textFieldQuantity.getText();
 				startFindProductThread(barcode, quantity);
 			}
 		});
@@ -126,11 +125,18 @@ public class AddProductGUI extends JFrame {
 		btnAddToShipment = new JButton("Add");
 		btnAddToShipment.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				startAddProductToShipmentThread(
-						barcode,
-						Integer.parseInt(quantity),
-						Integer.parseInt(shipmentNo)
-				);
+				try {
+					int q = Integer.parseInt(textFieldQuantity.getText());
+					startAddProductToShipmentThread(
+							barcode,
+							q,
+							Integer.parseInt(shipmentNo)
+					);
+				} catch (NumberFormatException nfe) {
+					JOptionPane.showMessageDialog(new JFrame(), "Invalid quantity.");
+				}
+				
+
 			}
 		});
 		btnAddToShipment.setBounds(126, 167, 98, 25);
@@ -207,13 +213,6 @@ public class AddProductGUI extends JFrame {
 		
 		SwingWorker sw = new SwingWorker() {
 			protected Object doInBackground() {
-				try {
-					Integer.parseInt(quantity);
-				} catch (NumberFormatException e) {
-					JOptionPane.showMessageDialog(new JFrame(), "Invalid quantity '" + quantity + "'");
-					cancel(true);
-				}
-				
 				try {
 					pc.findProductByBarcode(barcode);
 				} catch (SQLException e) {
