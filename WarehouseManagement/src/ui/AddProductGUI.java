@@ -176,6 +176,7 @@ public class AddProductGUI extends JFrame {
 	
 	private static void startAddProductToShipmentThread(String barcode, int quantity, int shipmentNo) {
 		sc = new ShipmentController();
+		pc = new ProductController();
 		
 		SwingWorker sw = new SwingWorker() {
 			boolean success = false;
@@ -202,12 +203,24 @@ public class AddProductGUI extends JFrame {
 						e.printStackTrace();
 					}
 					cancel(true);
+					
 				}
 				
 				return true;
 			}
 			
 			protected void done() {
+				if(!isCancelled()) {
+					try {
+						int minStock = pc.findProductByBarcode(barcode).getMinStock();
+						int currentStock = pc.findProductByBarcode(barcode).getQuantityInStock();
+						if(currentStock < minStock && currentStock > 0) JOptionPane.showMessageDialog(new JFrame(), "Warning: Current stock (" + currentStock + ") is now under the minimum stock threshold (" + minStock + ")");
+					} catch (SQLException e) {
+						JOptionPane.showMessageDialog(new JFrame(), "No product was found.");
+						cancel(true);
+					}
+				}
+				
 				if(!isCancelled()) JOptionPane.showMessageDialog(new JFrame(), "Added " + quantity + " of " + barcode + " to shipment " + shipmentNo);
 			}
 		};
