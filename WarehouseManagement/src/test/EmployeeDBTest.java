@@ -1,20 +1,28 @@
 package test;
 
-import java.sql.SQLException;
-
-import db.EmployeeDB;
+import db.*;
 import model.Employee;
 
-public class EmployeeDBTest {
-	public static void main(String args[]) throws SQLException {
-		EmployeeDB edb = new EmployeeDB();
-		
-		Employee employee = edb.findByEmployeeNo(1);
-		
-		System.out.println(employee.getName());
-		
-		for(Employee e : edb.findAll()) {
-			System.out.println(e.getName());
-		}
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.sql.SQLException;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+class EmployeeDBTest {
+	
+	static EmployeeDBIF edb;
+	
+	@BeforeAll 
+	static public void beforeAll() {
+		edb = new EmployeeDB();
 	}
+	
+	@Test
+	void findEmployeeTest() throws SQLException {
+		Employee e = edb.findByEmployeeNo(2);
+		assertEquals(e.getName(), "Niels Christian");
+	}
+
 }

@@ -12,7 +12,7 @@ import model.Shipment;
 public class ShipmentController {
 	ProductController productC;
 	EmployeeController employeeC;
-	ReceiverController partyC;
+	ReceiverController receiverC;
 	
 	ShipmentDB sdb;
 	
@@ -20,11 +20,11 @@ public class ShipmentController {
 	
 	public Shipment createShipment(int employeeNo, String phoneNo, LocalDate date) throws SQLException {
 		employeeC = new EmployeeController();
-		partyC = new ReceiverController();
+		receiverC = new ReceiverController();
 		sdb = new ShipmentDB();
 		
 		Shipment s = new Shipment(
-				partyC.findPartyByPhoneNo(phoneNo),
+				receiverC.findPartyByPhoneNo(phoneNo),
 				date,
 				employeeC.findEmployeeByEmployeeNo(employeeNo)
 		);

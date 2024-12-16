@@ -30,7 +30,7 @@ public class Shipment {
     }
 
     // Getter for party
-    public Receiver getParty() {
+    public Receiver getReceiver() {
         return receiver;
     }
 
