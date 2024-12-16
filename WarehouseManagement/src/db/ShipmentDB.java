@@ -26,7 +26,7 @@ public class ShipmentDB implements ShipmentDBIF {
 	public Shipment create(Shipment s) throws SQLException {
 		Shipment shipment = s;
 		
-		String phoneNo = s.getParty().getPhoneNo();
+		String phoneNo = s.getReceiver().getPhoneNo();
 		LocalDate date = s.getDate();
 		int employeeNo = s.getEmployee().getEmployeeNo();
 		

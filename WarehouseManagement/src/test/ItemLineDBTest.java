@@ -23,15 +23,16 @@ class ItemLineDBTest {
 	
 	@Test
 	void createItemLineTest() throws SQLException {
-		Product p = new Product("AAA123", 100, 10, "Light Beige Blonde Mix 16B/60B", "Tape Extension", 50, 50);
+		Product p = new Product("AAA123", 100, 10,  "Tape Extension", "Light Beige Blonde Mix 16B/60B", 50, 50);
 		ItemLine il = new ItemLine(1, p);
 		ItemLine ilReturn = idb.create(il, 1);
 		assertEquals(ilReturn.getProduct().getType(), il.getProduct().getType());
 	}
 	
+	@Test
 	void findItemLineTest() throws SQLException {
-		Product p = new Product("AAA123", 100, 10, "Light Beige Blonde Mix 16B/60B", "Tape Extension", 50, 50);
-		ItemLine il = idb.findByShipmentNo(1).get(0);
+		Product p = new Product("AAA123", 100, 10, "Tape Extension", "Light Beige Blonde Mix 16B/60B", 50, 50);
+		ItemLine il = idb.findById(1);
 		assertEquals(il.getProduct().getType(), p.getType());
 	}
 
