@@ -118,15 +118,15 @@ public class CreateShipmentGUI extends JFrame {
 		btnCreateShipment.setBounds(119, 144, 130, 25);
 		contentPane.add(btnCreateShipment);
 		
-		JButton btnCancel = new JButton("Cancel");
-		btnCancel.addActionListener(new ActionListener() {
+		JButton btnExit = new JButton("Exit");
+		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				contentPane.setVisible(false);
 				CreateShipmentGUI.this.dispose();
 			}
 		});
-		btnCancel.setBounds(12, 144, 74, 25);
-		contentPane.add(btnCancel);
+		btnExit.setBounds(12, 144, 74, 25);
+		contentPane.add(btnExit);
 	}
 	
 	

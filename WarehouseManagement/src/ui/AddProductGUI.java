@@ -42,7 +42,7 @@ public class AddProductGUI extends JFrame {
 	
 	private JTextField txtShipment;
 	private JButton btnAddToShipment;
-	private JButton btnCancel;
+	private JButton btnExit;
 	
 	/**
 	 * Launch the application.
@@ -89,7 +89,7 @@ public class AddProductGUI extends JFrame {
 				startFindProductThread(barcode, quantity);
 			}
 		});
-		btnProduct.setBounds(126, 59, 98, 25);
+		btnProduct.setBounds(126, 25, 98, 25);
 		contentPane.add(btnProduct);
 		
 		textFieldQuantity = new JTextField();
@@ -142,9 +142,15 @@ public class AddProductGUI extends JFrame {
 		btnAddToShipment.setBounds(126, 167, 98, 25);
 		contentPane.add(btnAddToShipment);
 		
-		btnCancel = new JButton("Cancel");
-		btnCancel.setBounds(12, 167, 98, 25);
-		contentPane.add(btnCancel);
+		btnExit = new JButton("Exit");
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				contentPane.setVisible(false);
+				AddProductGUI.this.dispose();
+			}
+		});
+		btnExit.setBounds(12, 167, 98, 25);
+		contentPane.add(btnExit);
 	}
 	
 	private static void startFindShipmentThread(int shipmentNo) {
