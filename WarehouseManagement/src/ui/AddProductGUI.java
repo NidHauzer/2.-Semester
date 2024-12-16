@@ -167,7 +167,7 @@ public class AddProductGUI extends JFrame {
 			}
 			
 			protected void done() {
-				lblShipment.setText("Shipment: " + sc.getShipment().getShipmentNo() + ", " + sc.getShipment().getParty().getName());
+				lblShipment.setText("Shipment: " + sc.getShipment().getShipmentNo() + ", " + sc.getShipment().getReceiver().getName());
 			}
 		};
 		sw.execute();
