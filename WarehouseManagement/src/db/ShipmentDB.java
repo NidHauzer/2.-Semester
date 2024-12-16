@@ -12,13 +12,13 @@ import java.util.List;
 
 import model.Address;
 import model.Employee;
-import model.Party;
+import model.Receiver;
 import model.Shipment;
 
 public class ShipmentDB implements ShipmentDBIF {
 
 	DBConnection dbc = DBConnection.getInstance();
-	PartyDB pdb;
+	ReceiverDB pdb;
 	
 	//Method to get ID from INSERT statement taken from:
 	//https://stackoverflow.com/questions/1915166/how-to-get-the-insert-id-in-jdbc/1915197#1915197
@@ -100,7 +100,7 @@ public class ShipmentDB implements ShipmentDBIF {
 	}
 	
 	public Shipment buildObject(ResultSet rs) throws SQLException {
-		pdb = new PartyDB();
+		pdb = new ReceiverDB();
 		
 		String employeeName = rs.getString("EmployeeName");
 		int employeeNo = rs.getInt("employeeNo");
@@ -118,12 +118,12 @@ public class ShipmentDB implements ShipmentDBIF {
 		String partyName = rs.getString("PartyName");
 		String phoneNo = rs.getString("phoneNo");
 		
-		Party party = new Party(partyName, phoneNo, address);
+		Receiver receiver = new Receiver(partyName, phoneNo, address);
 		
 		int shipmentNo = rs.getInt("shipmentNo");
 		LocalDate date = rs.getDate("date").toLocalDate();
 		
-		return new Shipment(party, date, employee, shipmentNo);
+		return new Shipment(receiver, date, employee, shipmentNo);
 	}
 	
 	public List<Shipment> buildObjects(ResultSet rs) throws SQLException {

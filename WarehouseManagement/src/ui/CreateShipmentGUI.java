@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import controller.EmployeeController;
-import controller.PartyController;
+import controller.ReceiverController;
 import controller.ShipmentController;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -31,7 +31,7 @@ public class CreateShipmentGUI extends JFrame {
 	private static JLabel lblEmployee;
 	
 	private static EmployeeController ec;
-	private static PartyController pc;
+	private static ReceiverController pc;
 	private static ShipmentController sc;
 	
 	private static int employeeNo;
@@ -154,7 +154,7 @@ public class CreateShipmentGUI extends JFrame {
 	}
 	
 	private static void startFindReceiverThread(String phoneNo) {
-		pc = new PartyController();
+		pc = new ReceiverController();
 		
 		SwingWorker sw = new SwingWorker() {
 			String name = "";
