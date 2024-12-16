@@ -4,7 +4,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 
 import db.ShipmentDB;
-import db.PartyDB;
+import db.ReceiverDB;
 import model.*;
 
 public class ShipmentDBTest {
@@ -12,7 +12,7 @@ public class ShipmentDBTest {
 		
 		
 		ShipmentDB sdb = new ShipmentDB();
-		PartyDB pdb = new PartyDB();
+		ReceiverDB pdb = new ReceiverDB();
 		
 		
 		Shipment s = sdb.findByShipmentNo(10);
@@ -22,9 +22,9 @@ public class ShipmentDBTest {
 		
 		Employee employee = new Employee("Thea", 1);
 		
-		Party party = pdb.findByPhoneNo("26191604");
+		Receiver receiver = pdb.findByPhoneNo("26191604");
 		
-		Shipment shipment = new Shipment(party, LocalDate.now(), employee);
+		Shipment shipment = new Shipment(receiver, LocalDate.now(), employee);
 		
 //		if(sdb.create(shipment)) System.out.println("Success!");
 //		else {

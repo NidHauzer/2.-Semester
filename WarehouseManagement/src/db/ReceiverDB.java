@@ -9,21 +9,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.Address;
-import model.Party;
+import model.Receiver;
 
-public class PartyDB implements PartyDBIF {
+public class ReceiverDB implements ReceiverDBIF {
 
 	DBConnection dbc = DBConnection.getInstance();
 	
-	public List<Party> findAll() throws SQLException {
+	public List<Receiver> findAll() throws SQLException {
 		Connection con = dbc.getConnection();
 		Statement s = con.createStatement();
 		ResultSet rs = s.executeQuery("SELECT * FROM Party");
 		return buildObjects(rs);
 	}
 
-	public Party findByPhoneNo(String phoneNo) throws SQLException {
-		Party party = null;
+	public Receiver findByPhoneNo(String phoneNo) throws SQLException {
+		Receiver receiver = null;
 		
 		Connection con = dbc.getConnection();
 		PreparedStatement p = con.prepareStatement("SELECT * FROM Party "
@@ -34,16 +34,16 @@ public class PartyDB implements PartyDBIF {
 		p.setString(1, phoneNo);
 		
 		try(ResultSet rs = p.executeQuery()) {
-			if(rs.next()) party = buildObject(rs);
+			if(rs.next()) receiver = buildObject(rs);
 			else {
 				throw new SQLException("Party was not found.");
 			}
 		}
 		
-		return party;
+		return receiver;
 	}
 	
-	private Party buildObject(ResultSet rs) throws SQLException {
+	private Receiver buildObject(ResultSet rs) throws SQLException {
 		String country = rs.getString("country");
 		String city = rs.getString("city");
 		String zip = rs.getString("zip");
@@ -55,11 +55,11 @@ public class PartyDB implements PartyDBIF {
 		String name = rs.getString("name");
 		String phoneNo = rs.getString("phoneNo");
 		
-		return new Party(name, phoneNo, address);
+		return new Receiver(name, phoneNo, address);
 	}
 	
-	private List<Party> buildObjects(ResultSet rs) throws SQLException {
-		ArrayList<Party> list = new ArrayList<Party>();
+	private List<Receiver> buildObjects(ResultSet rs) throws SQLException {
+		ArrayList<Receiver> list = new ArrayList<Receiver>();
 		while(rs.next()) {
 			list.add(buildObject(rs));
 		}

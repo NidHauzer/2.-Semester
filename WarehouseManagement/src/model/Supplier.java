@@ -1,6 +1,6 @@
 package model;
 
-public class Supplier extends Party {
+public class Supplier extends Receiver {
 	
 	private String cvrNumber;
 

@@ -3,7 +3,6 @@ USE WarehouseManagement;
 --Remove tables if they exist
 DROP TABLE IF EXISTS Warehouse, Location, ItemLine, Product, Shipment, Party, Address, ZipCity, Country, Employee;
 
-DROP TABLE IF EXISTS Warehouse, Location, ItemLine, Product, Shipment, Party, Address, ZipCity, Employee, ZipCountry;
 GO
 
 --Create all tables
@@ -29,18 +28,6 @@ CREATE TABLE Address (
     zip VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES ZipCity(zip),
     addressId int NOT NULL PRIMARY KEY IDENTITY(1,1)
 )
-
-CREATE TABLE ZipCountry (
-    zip VARCHAR(128) NOT NULL PRIMARY KEY,
-    country VARCHAR(128) NOT NULL
-);
-
-CREATE TABLE Address (
-    addressId INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-    streetName VARCHAR(128) NOT NULL,
-    houseNo INT NOT NULL,
-    zip VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES ZipCountry(zip)
-);
 
 CREATE TABLE Party (
     name VARCHAR(128),
@@ -99,9 +86,6 @@ INSERT INTO Product VALUES ('AAA123', '100', '10', 'Light Beige Blonde Mix 16B/6
 
 INSERT INTO Employee VALUES ('Thea', '1')
 INSERT INTO Employee VALUES('Niels Christian', '2');
-
-INSERT INTO ZipCountry VALUES ('9300', 'Denmark');
-INSERT INTO ZipCountry VALUES ('4000', 'Denmark');
 
 INSERT INTO Address (streetName, houseNo, zip) VALUES ('Gl. Aalborgvej', 55, '9300');
 INSERT INTO Address (streetName, houseNo, zip) VALUES ('Lagervej', 12, '4000');

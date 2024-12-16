@@ -15,7 +15,7 @@ public class PartyDBTest2 {
 		
 		String phoneNo = "11223344";
 		
-		PartyDB pdb = new PartyDB();		
+		ReceiverDB pdb = new ReceiverDB();		
 		System.out.println(pdb.findByPhoneNo(phoneNo).getName());
 		System.out.println(pdb.findByPhoneNo(phoneNo).getAddress().getCity());
 		System.out.println(pdb.findByPhoneNo(phoneNo).getAddress().getCountry());
