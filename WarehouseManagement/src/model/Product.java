@@ -9,6 +9,8 @@ public class Product {
 	private int length;
 	private int amount;
 	
+	
+	//Constructor
 	public Product(String barcode, int quantityInStock, int minStock, String type, String colour, int length, int amount) {
 		this.barcode = barcode;
 		this.quantityInStock = quantityInStock;
@@ -19,6 +21,8 @@ public class Product {
 		this.amount = amount;
 	}
 	
+	
+	//Getters
 	public String getBarcode() {
 		return barcode;
 	}
@@ -41,6 +45,7 @@ public class Product {
 		return amount;
 	}
 	
+	//Setters
 	public void setMinStock(int m) {
 		this.minStock = m;
 	}

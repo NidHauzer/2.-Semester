@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import java.awt.GridLayout;
@@ -73,6 +74,11 @@ public class MainGUI extends JFrame {
 		contentPane.add(btnAddProduct);
 		
 		JButton btnOrderConfirmation = new JButton("Print Order Confirmation");
+		btnOrderConfirmation.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(new JFrame(), "Printer is out of ink!");
+			}
+		});
 		btnOrderConfirmation.setBounds(117, 196, 205, 37);
 		contentPane.add(btnOrderConfirmation);
 		
