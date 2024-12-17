@@ -1,7 +1,7 @@
 USE WarehouseManagement;
 
 --Remove tables if they exist
-DROP TABLE IF EXISTS Warehouse, Location, ItemLine, Product, Shipment, Party, Address, ZipCity, Country, Employee;
+DROP TABLE IF EXISTS Warehouse, Location, ItemLine, Product, Shipment, Receiver, Address, ZipCity, Country, Employee;
 
 GO
 
@@ -29,14 +29,14 @@ CREATE TABLE Address (
     addressId int NOT NULL PRIMARY KEY IDENTITY(1,1)
 )
 
-CREATE TABLE Party (
+CREATE TABLE Receiver (
     name VARCHAR(128),
     phoneNo VARCHAR(128) NOT NULL PRIMARY KEY,
     addressId INT NOT NULL FOREIGN KEY REFERENCES Address(addressId)
 );
 
 CREATE TABLE Shipment (
-    phoneNo VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES Party(phoneNo),
+    phoneNo VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES Receiver(phoneNo),
     shipmentNo INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
     date DATE NOT NULL,
     employeeNo INT NOT NULL FOREIGN KEY REFERENCES Employee(employeeNo)
@@ -79,8 +79,8 @@ INSERT INTO ZipCity VALUES ('4000', 'Roskilde', '1');
 INSERT INTO Address VALUES ('Gl. Aalborgvej', 55, '9300')
 INSERT INTO Address VALUES ('Lagervej', '12', '4000')
 
-INSERT INTO Party VALUES ('Sæby Lager', '11223344', 1)
-INSERT INTO Party VALUES ('Roskilde Lager', '12345678', 2);
+INSERT INTO Receiver VALUES ('Sæby Lager', '11223344', 1)
+INSERT INTO Receiver VALUES ('Roskilde Lager', '12345678', 2);
 
 INSERT INTO Product VALUES ('AAA123', '100', '10', 'Light Beige Blonde Mix 16B/60B', 'Tape Extension', '50', '50')
 
