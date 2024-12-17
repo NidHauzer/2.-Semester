@@ -28,4 +28,13 @@ class ProductDBTest {
 		assertEquals(p.getType(), type);
 	}
 
+	 @Test
+	    void exceptionTest() {
+	        String expectedMessage = "No product was found.";
+	        SQLException exception = assertThrows(SQLException.class, () -> {
+	            pdb.findByBarcode("A");
+	        });
+	        
+	        assertEquals(expectedMessage, exception.getMessage());
+	    }
 }
