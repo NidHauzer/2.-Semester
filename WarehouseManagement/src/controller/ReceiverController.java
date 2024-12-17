@@ -8,7 +8,7 @@ import model.Receiver;
 public class ReceiverController {
 	ReceiverDB pdb;
 	
-	public Receiver findPartyByPhoneNo(String phoneNo) throws SQLException {
+	public Receiver findReceiverByPhoneNo(String phoneNo) throws SQLException {
 		pdb = new ReceiverDB();
 		return pdb.findByPhoneNo(phoneNo);
 	}
