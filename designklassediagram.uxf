@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>5</zoom_level>
+  <zoom_level>4</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>285</x>
-      <y>700</y>
-      <w>240</w>
-      <h>170</h>
+      <x>228</x>
+      <y>576</y>
+      <w>192</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>Product
 --
@@ -41,10 +41,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>625</x>
-      <y>755</y>
-      <w>175</w>
-      <h>60</h>
+      <x>500</x>
+      <y>620</y>
+      <w>140</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>Location
 --
@@ -59,10 +59,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>860</x>
-      <y>745</y>
-      <w>175</w>
-      <h>85</h>
+      <x>688</x>
+      <y>612</y>
+      <w>140</w>
+      <h>68</h>
     </coordinates>
     <panel_attributes>Warehouse
 --
@@ -81,10 +81,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>315</x>
-      <y>585</y>
-      <w>175</w>
-      <h>60</h>
+      <x>252</x>
+      <y>484</y>
+      <w>140</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>ItemLine
 --
@@ -100,20 +100,20 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>265</x>
-      <y>430</y>
-      <w>255</w>
-      <h>105</h>
+      <x>212</x>
+      <y>360</y>
+      <w>204</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>Shipment
 --
-- party: Party
+- receiver: Receiver
 - shipmentNo: int
 - date: LocalDate
 - items: List&lt;ItemLine&gt;
 --
-+ &lt;&lt;create&gt;&gt; Shipment(recipient: Recipient, shipmentNo: int, date: LocalDate)
-+ getParty(): Party
++ &lt;&lt;create&gt;&gt; Shipment(receiver: Receiver, shipmentNo: int, date: LocalDate)
++ getReceicer(): Receiver
 + getShipmentNo(): int
 + getDate(): LocalDate
 + getItems(): List&lt;ItemLine&gt;
@@ -124,10 +124,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>595</x>
-      <y>440</y>
-      <w>245</w>
-      <h>80</h>
+      <x>476</x>
+      <y>368</y>
+      <w>196</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>Receiver
 --
@@ -135,7 +135,7 @@ bg=TRANSPARENT</panel_attributes>
 - phoneNo: String
 - address: Address
 --
-+ &lt;&lt;create&gt;&gt; Recipient(name: String, phoneNo: String, address: Address)
++ &lt;&lt;create&gt;&gt; Receiver(name: String, phoneNo: String, address: Address)
 + getName(): String
 + getPhoneNo(): String
 + getAddress(): Address
@@ -145,10 +145,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>895</x>
-      <y>415</y>
-      <w>200</w>
-      <h>120</h>
+      <x>716</x>
+      <y>348</y>
+      <w>160</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Address
 --
@@ -172,9 +172,9 @@ bg=TRANSPARENT</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>450</y>
-      <w>195</w>
-      <h>65</h>
+      <y>376</y>
+      <w>156</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>Employee
 --
@@ -190,10 +190,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
-      <y>785</y>
-      <w>115</w>
-      <h>15</h>
+      <x>416</x>
+      <y>644</y>
+      <w>92</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;210.0;10.0</additional_attributes>
@@ -201,10 +201,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>795</x>
-      <y>785</y>
-      <w>75</w>
-      <h>15</h>
+      <x>636</x>
+      <y>644</y>
+      <w>60</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
@@ -212,10 +212,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>395</x>
-      <y>640</y>
-      <w>15</w>
-      <h>70</h>
+      <x>316</x>
+      <y>528</y>
+      <w>12</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
@@ -223,10 +223,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>835</x>
-      <y>465</y>
-      <w>70</w>
-      <h>15</h>
+      <x>668</x>
+      <y>388</y>
+      <w>56</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
@@ -234,10 +234,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>530</y>
-      <w>15</w>
-      <h>65</h>
+      <x>312</x>
+      <y>440</y>
+      <w>12</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
@@ -245,10 +245,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>190</x>
-      <y>480</y>
-      <w>85</w>
-      <h>15</h>
+      <x>152</x>
+      <y>400</y>
+      <w>68</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
@@ -256,10 +256,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>515</x>
-      <y>480</y>
-      <w>90</w>
-      <h>15</h>
+      <x>412</x>
+      <y>400</y>
+      <w>72</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
@@ -267,10 +267,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1205</x>
-      <y>450</y>
-      <w>155</w>
-      <h>50</h>
+      <x>964</x>
+      <y>376</y>
+      <w>124</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 ProductDBIF
@@ -290,10 +290,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1205</x>
-      <y>540</y>
-      <w>150</w>
-      <h>40</h>
+      <x>964</x>
+      <y>448</y>
+      <w>120</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>ProductDB
 --
@@ -309,10 +309,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1275</x>
-      <y>495</y>
-      <w>15</w>
-      <h>55</h>
+      <x>1020</x>
+      <y>412</y>
+      <w>12</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
@@ -320,10 +320,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
-      <y>575</y>
-      <w>725</w>
-      <h>150</h>
+      <x>416</x>
+      <y>476</y>
+      <w>580</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;280.0;1430.0;280.0;1430.0;10.0</additional_attributes>
@@ -331,10 +331,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1205</x>
-      <y>750</y>
-      <w>115</w>
-      <h>50</h>
+      <x>964</x>
+      <y>616</y>
+      <w>92</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>DBConnection
 --
@@ -349,10 +349,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1265</x>
-      <y>575</y>
-      <w>15</w>
-      <h>185</h>
+      <x>1012</x>
+      <y>476</y>
+      <w>12</w>
+      <h>148</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;350.0;10.0;10.0</additional_attributes>
@@ -360,10 +360,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1385</x>
-      <y>430</y>
-      <w>155</w>
-      <h>55</h>
+      <x>1108</x>
+      <y>360</y>
+      <w>124</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 ShipmentDBIF
@@ -381,10 +381,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1380</x>
-      <y>540</y>
-      <w>150</w>
-      <h>40</h>
+      <x>1104</x>
+      <y>448</y>
+      <w>120</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>ShipmentDB
 --
@@ -396,10 +396,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1445</x>
-      <y>480</y>
-      <w>15</w>
-      <h>70</h>
+      <x>1156</x>
+      <y>400</y>
+      <w>12</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
@@ -407,10 +407,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1315</x>
-      <y>575</y>
-      <w>95</w>
-      <h>190</h>
+      <x>1052</x>
+      <y>476</y>
+      <w>76</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;360.0;170.0;360.0;170.0;10.0</additional_attributes>
@@ -418,10 +418,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>485</x>
-      <y>380</y>
-      <w>1105</w>
-      <h>190</h>
+      <x>388</x>
+      <y>320</y>
+      <w>884</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;100.0;10.0;10.0;2190.0;10.0;2190.0;360.0;2090.0;360.0</additional_attributes>
@@ -429,18 +429,18 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1625</x>
-      <y>640</y>
-      <w>150</w>
-      <h>45</h>
+      <x>1300</x>
+      <y>528</y>
+      <w>120</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 ReceiverDBIF
 --
-// + create(p: Party): Party
-// + delete(p: Party): boolean
-// + update(p: Party): Party
-+ findAll(): List&lt;Party&gt;
+// + create(r: Receiver): Receiver
+// + delete(r: Receicer): boolean
+// + update(r: Receiver): Receiver
++ findAll(): List&lt;Receicer&gt;
 + findByPhoneNo(phoneNo: String): Receiver
 
 
@@ -452,10 +452,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1625</x>
-      <y>725</y>
-      <w>150</w>
-      <h>40</h>
+      <x>1300</x>
+      <y>596</y>
+      <w>120</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>ReceiverDB
 --
@@ -467,10 +467,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1700</x>
-      <y>680</y>
-      <w>15</w>
-      <h>55</h>
+      <x>1360</x>
+      <y>560</y>
+      <w>12</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
@@ -478,10 +478,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1315</x>
-      <y>600</y>
-      <w>500</w>
-      <h>185</h>
+      <x>1052</x>
+      <y>496</y>
+      <w>400</w>
+      <h>148</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;350.0;210.0;350.0;210.0;10.0;980.0;10.0;980.0;270.0;920.0;270.0</additional_attributes>
@@ -489,10 +489,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>740</x>
-      <y>310</y>
-      <w>1175</w>
-      <h>450</h>
+      <x>592</x>
+      <y>264</y>
+      <w>940</w>
+      <h>360</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;260.0;10.0;10.0;2330.0;20.0;2330.0;880.0;2070.0;880.0</additional_attributes>
@@ -500,10 +500,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1030</x>
-      <y>500</y>
-      <w>90</w>
-      <h>310</h>
+      <x>824</x>
+      <y>416</y>
+      <w>72</w>
+      <h>248</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>130.0;10.0;160.0;10.0;160.0;600.0;10.0;600.0</additional_attributes>
@@ -511,10 +511,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1605</x>
-      <y>430</y>
-      <w>175</w>
-      <h>75</h>
+      <x>1284</x>
+      <y>360</y>
+      <w>140</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 ItemLineDBIF
@@ -536,10 +536,10 @@ layer=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1615</x>
-      <y>535</y>
-      <w>150</w>
-      <h>40</h>
+      <x>1292</x>
+      <y>444</y>
+      <w>120</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>ItemLineDB
 --
@@ -552,10 +552,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1685</x>
-      <y>500</y>
-      <w>15</w>
-      <h>45</h>
+      <x>1348</x>
+      <y>416</y>
+      <w>12</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -563,10 +563,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1315</x>
-      <y>570</y>
-      <w>330</w>
-      <h>205</h>
+      <x>1052</x>
+      <y>472</y>
+      <w>264</w>
+      <h>164</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;390.0;190.0;390.0;190.0;50.0;640.0;50.0;640.0;10.0</additional_attributes>
@@ -574,10 +574,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>345</y>
-      <w>1590</w>
-      <h>270</h>
+      <x>196</x>
+      <y>292</y>
+      <w>1272</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>140.0;520.0;10.0;520.0;10.0;10.0;3160.0;10.0;3160.0;430.0;3040.0;430.0</additional_attributes>
@@ -585,17 +585,17 @@ layer=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1440</x>
-      <y>640</y>
-      <w>165</w>
-      <h>45</h>
+      <x>1152</x>
+      <y>528</y>
+      <w>132</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 EmployeeDBIF
 --
-// + create(p: Party): Party
-// + delete(p: Party): boolean
-// + update(p: Party): Party
+// + create(r: Receiver): Receiver
+// + delete(r: Receicer): boolean
+// + update(r: Receiver): Receiver
 + findAll(): List&lt;Employee&gt;
 + findByEmployeeNo(employeeNo: int): Employee
 
@@ -608,10 +608,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1450</x>
-      <y>720</y>
-      <w>150</w>
-      <h>40</h>
+      <x>1160</x>
+      <y>592</y>
+      <w>120</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>EmployeeDB
 --
@@ -623,10 +623,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1520</x>
-      <y>680</y>
-      <w>15</w>
-      <h>50</h>
+      <x>1216</x>
+      <y>560</y>
+      <w>12</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
@@ -634,10 +634,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1285</x>
-      <y>755</y>
-      <w>195</w>
-      <h>90</h>
+      <x>1028</x>
+      <y>620</y>
+      <w>156</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;90.0;10.0;160.0;370.0;160.0;370.0;10.0</additional_attributes>
@@ -645,10 +645,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>145</x>
-      <y>510</y>
-      <w>1400</w>
-      <h>455</h>
+      <x>116</x>
+      <y>424</y>
+      <w>1120</w>
+      <h>364</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;890.0;2780.0;890.0;2780.0;500.0</additional_attributes>
@@ -656,10 +656,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1030</x>
-      <y>365</y>
-      <w>865</w>
-      <h>385</h>
+      <x>824</x>
+      <y>308</y>
+      <w>692</w>
+      <h>308</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;100.0;10.0;10.0;1710.0;10.0;1710.0;750.0;1490.0;750.0</additional_attributes>
@@ -667,10 +667,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>720</x>
-      <y>60</y>
-      <w>260</w>
-      <h>60</h>
+      <x>576</x>
+      <y>64</y>
+      <w>208</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>ShipmentController
 --
@@ -683,10 +683,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>425</x>
-      <y>185</y>
-      <w>170</w>
-      <h>55</h>
+      <x>340</x>
+      <y>164</y>
+      <w>136</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>ProductController
 --
@@ -700,10 +700,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>735</x>
-      <y>185</y>
-      <w>195</w>
-      <h>40</h>
+      <x>588</x>
+      <y>164</y>
+      <w>156</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>EmployeeController
 --
@@ -715,10 +715,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1005</x>
-      <y>185</y>
-      <w>175</w>
-      <h>40</h>
+      <x>804</x>
+      <y>164</y>
+      <w>140</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>ReceiverController
 --
@@ -730,10 +730,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>225</y>
-      <w>225</w>
-      <h>515</h>
+      <x>168</x>
+      <y>196</y>
+      <w>180</w>
+      <h>412</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>150.0;1010.0;10.0;1010.0;10.0;10.0;430.0;10.0</additional_attributes>
@@ -741,10 +741,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>225</x>
-      <y>235</y>
-      <w>220</w>
-      <h>405</h>
+      <x>180</x>
+      <y>204</y>
+      <w>176</w>
+      <h>324</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>180.0;790.0;10.0;790.0;10.0;70.0;420.0;70.0;420.0;10.0</additional_attributes>
@@ -752,10 +752,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>235</y>
-      <w>670</w>
-      <h>225</h>
+      <x>448</x>
+      <y>204</y>
+      <w>536</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>1320.0;430.0;1320.0;140.0;10.0;140.0;10.0;10.0</additional_attributes>
@@ -763,10 +763,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>580</x>
-      <y>235</y>
-      <w>1090</w>
-      <h>205</h>
+      <x>464</x>
+      <y>204</y>
+      <w>872</w>
+      <h>164</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>2160.0;390.0;2160.0;110.0;10.0;110.0;10.0;10.0</additional_attributes>
@@ -774,10 +774,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
-      <y>220</y>
-      <w>645</w>
-      <h>240</h>
+      <x>104</x>
+      <y>192</y>
+      <w>516</w>
+      <h>192</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;460.0;10.0;50.0;1270.0;50.0;1270.0;10.0</additional_attributes>
@@ -785,10 +785,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>880</x>
-      <y>220</y>
-      <w>990</w>
-      <h>430</h>
+      <x>704</x>
+      <y>192</y>
+      <w>792</w>
+      <h>344</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>1380.0;840.0;1380.0;810.0;1960.0;810.0;1960.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
@@ -796,10 +796,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1095</x>
-      <y>220</y>
-      <w>785</w>
-      <h>460</h>
+      <x>876</x>
+      <y>192</y>
+      <w>628</w>
+      <h>368</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>1360.0;900.0;1550.0;900.0;1550.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
@@ -807,10 +807,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>790</x>
-      <y>220</y>
-      <w>245</w>
-      <h>230</h>
+      <x>632</x>
+      <y>192</y>
+      <w>196</w>
+      <h>184</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;440.0;10.0;110.0;470.0;110.0;470.0;10.0</additional_attributes>
@@ -818,10 +818,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>830</x>
-      <y>115</y>
-      <w>15</w>
-      <h>80</h>
+      <x>664</x>
+      <y>108</y>
+      <w>12</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
@@ -829,10 +829,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>510</x>
-      <y>115</y>
-      <w>235</w>
-      <h>80</h>
+      <x>408</x>
+      <y>108</y>
+      <w>188</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;140.0;10.0;70.0;450.0;70.0;450.0;10.0</additional_attributes>
@@ -840,10 +840,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>930</x>
-      <y>115</y>
-      <w>160</w>
-      <h>80</h>
+      <x>744</x>
+      <y>108</y>
+      <w>128</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>300.0;140.0;300.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
@@ -851,10 +851,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>370</x>
-      <y>85</y>
-      <w>360</w>
-      <h>355</h>
+      <x>296</x>
+      <y>84</y>
+      <w>288</w>
+      <h>284</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;690.0;10.0;10.0;700.0;10.0</additional_attributes>
@@ -862,10 +862,10 @@ bg=TRANSPARENT</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>975</x>
-      <y>90</y>
-      <w>490</w>
-      <h>350</h>
+      <x>780</x>
+      <y>88</y>
+      <w>392</w>
+      <h>280</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>960.0;680.0;960.0;10.0;10.0;10.0</additional_attributes>
@@ -874,9 +874,9 @@ bg=TRANSPARENT</panel_attributes>
     <id>Text</id>
     <coordinates>
       <x>0</x>
-      <y>405</y>
-      <w>75</w>
-      <h>30</h>
+      <y>340</y>
+      <w>60</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>model
 fontsize=40
@@ -889,10 +889,10 @@ layer=10</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>415</x>
-      <y>55</y>
-      <w>110</w>
-      <h>35</h>
+      <x>332</x>
+      <y>60</y>
+      <w>88</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>controller
 fontsize=40
@@ -905,10 +905,10 @@ layer=10</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1235</x>
-      <y>415</y>
-      <w>75</w>
-      <h>35</h>
+      <x>988</x>
+      <y>348</y>
+      <w>60</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>db
 fontsize=40
