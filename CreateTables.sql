@@ -73,19 +73,16 @@ CREATE TABLE Warehouse (
 --Insert some test data
 INSERT INTO Country VALUES ('Denmark');
 
-INSERT INTO ZipCity VALUES ('9300', 'Sæby', '1');
+INSERT INTO ZipCity VALUES ('9300', 'Saeby', '1');
 INSERT INTO ZipCity VALUES ('4000', 'Roskilde', '1');
 
 INSERT INTO Address VALUES ('Gl. Aalborgvej', 55, '9300')
 INSERT INTO Address VALUES ('Lagervej', '12', '4000')
 
-INSERT INTO Receiver VALUES ('Sæby Lager', '11223344', 1)
+INSERT INTO Receiver VALUES ('Saeby Lager', '11223344', 1)
 INSERT INTO Receiver VALUES ('Roskilde Lager', '12345678', 2);
 
 INSERT INTO Product VALUES ('AAA123', '100', '10', 'Light Beige Blonde Mix 16B/60B', 'Tape Extension', '50', '50')
 
 INSERT INTO Employee VALUES ('Thea', '1')
 INSERT INTO Employee VALUES('Niels Christian', '2');
-
-INSERT INTO Address (streetName, houseNo, zip) VALUES ('Gl. Aalborgvej', 55, '9300');
-INSERT INTO Address (streetName, houseNo, zip) VALUES ('Lagervej', 12, '4000');
