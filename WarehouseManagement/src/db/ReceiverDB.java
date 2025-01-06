@@ -26,8 +26,8 @@ public class ReceiverDB implements ReceiverDBIF {
 		Receiver receiver = null;
 		
 		Connection con = dbc.getConnection();
-		PreparedStatement p = con.prepareStatement("SELECT * FROM Party "
-				+ "JOIN Address ON Party.addressId = Address.addressId "
+		PreparedStatement p = con.prepareStatement("SELECT * FROM Receiver "
+				+ "JOIN Address ON Receiver.addressId = Address.addressId "
 				+ "JOIN ZipCity on Address.zip = ZipCity.zip "
 				+ "JOIN Country on ZipCity.countryID = Country.countryID "
 				+ "WHERE phoneNo = ?");
@@ -36,7 +36,7 @@ public class ReceiverDB implements ReceiverDBIF {
 		try(ResultSet rs = p.executeQuery()) {
 			if(rs.next()) receiver = buildObject(rs);
 			else {
-				throw new SQLException("Party was not found.");
+				throw new SQLException("Receiver was not found.");
 			}
 		}
 		

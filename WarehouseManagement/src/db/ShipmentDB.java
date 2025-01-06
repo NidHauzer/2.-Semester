@@ -63,9 +63,10 @@ public class ShipmentDB implements ShipmentDBIF {
 		ResultSet rs = s.executeQuery("SELECT *, Employee.name AS EmployeeName, Party.name AS PartyName "
 				+ "FROM Shipment "
 				+ "JOIN Employee ON Shipment.employeeNo = Employee.employeeNo "
-				+ "JOIN Party ON Shipment.phoneNo = Party.phoneNo "
-				+ "JOIN Address ON Party.addressId = Address.addressId "
-				+ "JOIN ZipCity ON Address.zip = ZipCity.zip");
+				+ "JOIN Receiver ON Shipment.phoneNo = Receiver.phoneNo "
+				+ "JOIN Address ON Receiver.addressId = Address.addressId "
+				+ "JOIN ZipCity ON Address.zip = ZipCity.zip "
+				+ "JOIN Country ON ZipCity.countryID = Country.countryID");
 		if(rs.next()) list = buildObjects(rs);
 		else {
 			throw new SQLException("No shipments were found.");
@@ -79,11 +80,11 @@ public class ShipmentDB implements ShipmentDBIF {
 		Shipment shipment = null;
 		
 		Connection con = dbc.getConnection();
-		PreparedStatement p = con.prepareStatement("SELECT *, Employee.name AS EmployeeName, Party.name AS PartyName "
+		PreparedStatement p = con.prepareStatement("SELECT *, Employee.name AS EmployeeName, Receiver.name AS ReceiverName "
 				+ "FROM Shipment "
 				+ "JOIN Employee ON Shipment.employeeNo = Employee.employeeNo "
-				+ "JOIN Party ON Shipment.phoneNo = Party.phoneNo "
-				+ "JOIN Address ON Party.addressId = Address.addressId "
+				+ "JOIN Receiver ON Shipment.phoneNo = Receiver.phoneNo "
+				+ "JOIN Address ON Receiver.addressId = Address.addressId "
 				+ "JOIN ZipCity ON Address.zip = ZipCity.zip "
 				+ "JOIN Country ON ZipCity.countryID = Country.countryID "
 				+ "WHERE shipmentNo = ?");
@@ -99,9 +100,7 @@ public class ShipmentDB implements ShipmentDBIF {
 		return shipment;
 	}
 	
-	public Shipment buildObject(ResultSet rs) throws SQLException {
-		pdb = new ReceiverDB();
-		
+	public Shipment buildObject(ResultSet rs) throws SQLException {		
 		String employeeName = rs.getString("EmployeeName");
 		int employeeNo = rs.getInt("employeeNo");
 		
@@ -115,10 +114,10 @@ public class ShipmentDB implements ShipmentDBIF {
 		
 		Address address = new Address(streetName, houseNo, zip, city, country);
 		
-		String partyName = rs.getString("PartyName");
+		String receiverName = rs.getString("ReceiverName");
 		String phoneNo = rs.getString("phoneNo");
 		
-		Receiver receiver = new Receiver(partyName, phoneNo, address);
+		Receiver receiver = new Receiver(receiverName, phoneNo, address);
 		
 		int shipmentNo = rs.getInt("shipmentNo");
 		LocalDate date = rs.getDate("date").toLocalDate();

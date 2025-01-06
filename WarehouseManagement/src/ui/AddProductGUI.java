@@ -167,7 +167,12 @@ public class AddProductGUI extends JFrame {
 			}
 			
 			protected void done() {
-				lblShipment.setText("Shipment: " + sc.getShipment().getShipmentNo() + ", " + sc.getShipment().getReceiver().getName());
+				try {
+					lblShipment.setText("Shipment: " + sc.findShipment(shipmentNo).getShipmentNo() + ", " + sc.findShipment(shipmentNo).getReceiver().getName());
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		};
 		sw.execute();

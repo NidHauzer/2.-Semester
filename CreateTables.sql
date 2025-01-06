@@ -37,9 +37,9 @@ CREATE TABLE Receiver (
 
 CREATE TABLE Shipment (
     phoneNo VARCHAR(128) NOT NULL FOREIGN KEY REFERENCES Receiver(phoneNo),
-    shipmentNo INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
     date DATE NOT NULL,
-    employeeNo INT NOT NULL FOREIGN KEY REFERENCES Employee(employeeNo)
+    employeeNo INT NOT NULL FOREIGN KEY REFERENCES Employee(employeeNo),
+    shipmentNo INT NOT NULL IDENTITY(1,1) PRIMARY KEY
 );
 
 CREATE TABLE Product (
