@@ -32,7 +32,7 @@ class ItemLineDBTest {
 	@Test
 	void findItemLineTest() throws SQLException {
 		Product p = new Product("AAA123", 100, 10, "Tape Extension", "Light Beige Blonde Mix 16B/60B", 50, 50);
-		ItemLine il = idb.findById(1);
+		ItemLine il = idb.findById(2);
 		assertEquals(il.getProduct().getType(), p.getType());
 	}
 
